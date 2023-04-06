@@ -1,6 +1,7 @@
-import {useLoaderData} from '@remix-run/react';
 import {json} from '@shopify/remix-oxygen';
+import {useLoaderData} from '@remix-run/react';
 import ProductGrid from '../../components/ProductGrid';
+
 
 const seo = ({data}) => ({
   title: data?.collection?.title,
@@ -45,7 +46,6 @@ export const meta = ({data}) => {
 export default function Collection() {
   const {collection} = useLoaderData();
 
-  
   return (
     <>
       <header className="grid w-full gap-8 py-8 justify-items-start">
@@ -70,6 +70,8 @@ export default function Collection() {
     </>
   );
 }
+
+//--------------------- DATA QUERY --------------------- //
 
 const COLLECTION_QUERY = `#graphql
   query CollectionDetails($handle: String!, $cursor: String) {

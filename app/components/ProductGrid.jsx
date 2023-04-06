@@ -1,5 +1,5 @@
-import {useFetcher} from '@remix-run/react';
 import {useEffect, useState} from 'react';
+import {useFetcher} from '@remix-run/react';
 import ProductCard from './ProductCard';
 
 export default function ProductGrid({collection, url}) {

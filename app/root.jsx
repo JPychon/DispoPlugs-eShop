@@ -6,18 +6,18 @@ import {
   ScrollRestoration,
   useLoaderData,
 } from '@remix-run/react';
-import tailwind from './styles/tailwind-build.css';
-import favicon from '../public/favicon.svg';
+
 import {Layout} from './components/Layout';
 import {Seo} from '@shopify/hydrogen';
 import {defer} from '@shopify/remix-oxygen';
 import {CART_QUERY} from '~/queries/cart';
+import tailwind from './styles/tailwind-build.css';
+import favicon from '../public/favicon.svg';
 
 async function getCart({storefront}, cartId) {
   if (!storefront) {
     throw new Error('missing storefront client in cart query');
   }
-
   const {cart} = await storefront.query(CART_QUERY, {
     variables: {
       cartId,
@@ -29,7 +29,6 @@ async function getCart({storefront}, cartId) {
 
   return cart;
 }
-
 
 export const links = () => {
   return [
@@ -50,7 +49,6 @@ export const meta = () => ({
   charset: 'utf-8',
   viewport: 'width=device-width,initial-scale=1',
 });
-
 
 export async function loader({context, request}) {
   const cartId = await context.session.get('cartId');
@@ -83,6 +81,8 @@ export default function App() {
     </html>
   );
 }
+
+//--------------------- DATA QUERY --------------------- //
 
 const LAYOUT_QUERY = `#graphql
   query layout {

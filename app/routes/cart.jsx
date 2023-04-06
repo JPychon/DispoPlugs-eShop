@@ -1,7 +1,7 @@
 import {Link, useLoaderData} from '@remix-run/react';
-import {json} from '@shopify/remix-oxygen';
 import {CartLineItems, CartActions, CartSummary} from '~/components/Cart';
-import { CART_QUERY } from '~/queries/cart';
+import {CART_QUERY} from '~/queries/cart';
+import {json} from '@shopify/remix-oxygen';
 
 export async function loader({context}) {
     const cartId = await context.session.get('cartId');
