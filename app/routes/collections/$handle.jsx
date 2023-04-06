@@ -44,6 +44,8 @@ export const meta = ({data}) => {
 
 export default function Collection() {
   const {collection} = useLoaderData();
+
+  
   return (
     <>
       <header className="grid w-full gap-8 py-8 justify-items-start">
