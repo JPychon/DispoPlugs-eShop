@@ -1,0 +1,1 @@
+DispoPlugs is an online eShop built with Shopify headless API, Hydrogen, Tailwinds CSS & REACT. 
