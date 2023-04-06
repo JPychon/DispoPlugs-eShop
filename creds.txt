@@ -1,8 +1,0 @@
-GMAIL:
-
-EMAIL: DispoPlugs@gmail.com
-PASSWORD: DispoPlugs%!3
-
-Admin API Access Token: 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
-API Key: 9bac3ba9dc9e3f1a33dfe9dde89313b3
-API Secret Key: 4b48b48ab4bf1f5616848c68576fa404
