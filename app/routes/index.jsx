@@ -4,7 +4,7 @@ import {Image} from '@shopify/hydrogen';
 
 export const meta = () => {
   return {
-    title: 'Disposable Plugs',
+    title: 'Disposables Plug',
     description: 'eStore for Vapes & Disposables',
   };
 };
