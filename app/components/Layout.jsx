@@ -67,7 +67,7 @@ return (
 	/>
 	<header
 		role="banner"
-		className={`flex items-center h-16 p-6 md:p-8 lg:p-12 sticky z-40 top-0 justify-between w-full leading-none gap-4 antialiased transition shadow-md`}
+		className={`flex items-center h-16 p-6 md:p-8 lg:p-12 sticky z-40 top-0 justify-between w-full leading-none gap-4 antialiased transition shadow-md bg-neutral-50`}
 	>
 		<div className="flex gap-12 w-full items-center mt-7">
 		<a className="font-bold" href="/">
