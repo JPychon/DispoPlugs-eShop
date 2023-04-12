@@ -9,7 +9,7 @@ export function ProductSwimlane({
   ...props
 }) {
   return (
-    <Section className="ml-6" heading={title} padding="y" {...props}>
+    <Section className="mx-8" heading={title} padding="y" {...props}>
       <Grid layout="products" items={4}>
         {products.map((product) => (
           <ProductCard

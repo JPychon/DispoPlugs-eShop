@@ -1643,6 +1643,10 @@ select{
   margin-top: 2rem;
   margin-bottom: 2rem;
 }
+.mx-8{
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
 .-mb-px{
   margin-bottom: -1px;
 }
@@ -2471,6 +2475,9 @@ select{
 }
 .font-semibold{
   font-weight: 600;
+}
+.font-black{
+  font-weight: 900;
 }
 .uppercase{
   text-transform: uppercase;

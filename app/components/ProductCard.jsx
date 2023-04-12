@@ -65,19 +65,19 @@ export function ProductCard({
             <Text
               as="label"
               size="fine"
-              className="absolute top-0 right-0 m-4 text-right text-notice"
+              className="absolute top-0 right-0 m-4 text-middle text-notice"
             >
               {cardLabel}
             </Text>
           </div>
           <div className="grid gap-1">
             <Text
-              className="w-full overflow-hidden whitespace-nowrap text-ellipsis "
+              className="w-full overflow-hidden whitespace-nowrap text-center text-ellipsis font-black"
               as="h3"
             >
               {product.title}
             </Text>
-            <div className="flex gap-4">
+            <div className="flex gap-4 justify-center font-medium ">
               <Text className="flex gap-4">
                 <Money withoutTrailingZeros data={price} />
                 {isDiscounted(price, compareAtPrice) && (
