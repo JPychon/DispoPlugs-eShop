@@ -4,7 +4,7 @@ import {Disclosure} from '@headlessui/react';
 import {Suspense} from 'react';
 
 
-export function Footer({menu}) {
+export function FooterA({menu}) {
     const isHome = useIsHomePath();
     const itemsCount = menu
       ? menu?.items?.length + 1 > 4

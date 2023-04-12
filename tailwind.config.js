@@ -13,10 +13,13 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: withOpacityValue('--color-primary'),
-        contrast: withOpacityValue('--color-contrast'),
-        notice: withOpacityValue('--color-accent'),
-        shopPay: 'var(--color-shop-pay)',
+        /*primary: withOpacityValue('#fafafa'),*/
+        /*contrast: withOpacityValue('#020617'),*/
+        primary: '#020617',
+        contrast: withOpacityValue('#fafafa'),
+        clear_contrast:'#fafafa',
+        notice: withOpacityValue('#c2410c'),
+        shopPay: '#fca5a5'
       },
       screens: {
         sm: '32em',

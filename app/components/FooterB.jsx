@@ -1,4 +1,4 @@
-export function CustomFooter() {
+export function FooterB() {
     return(
     <footer className="grid bg-primary dark:bg-contrast dark:text-primary text-contrast items-start grid-flow-row w-full">
         <div className="mx-auto w-full px-12 lg:py-8">

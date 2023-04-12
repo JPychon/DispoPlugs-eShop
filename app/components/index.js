@@ -27,11 +27,11 @@ export {MobileHeader} from './MobileHeader';
 export {DesktopHeader} from './DesktopHeader';
 export {AccountLink} from './AccountLink';
 export {CartCount} from './CartCount';
-export {Footer} from './Footer';
+export {FooterA} from './FooterA';
+export {FooterB} from './FooterB';
 export {MenuMobileNav} from './MenuMobileNav';
 export {CartDrawer} from './CartDrawer';
 export {MenuDrawer} from './MenuDrawer';
-export {CustomFooter} from './CustomFooter';
 export {WarningBanner} from './WarningBanner';
-// Sue me
+export {Header} from './Header';
 export * from './Icon';

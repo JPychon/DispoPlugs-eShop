@@ -1,7 +1,7 @@
 function root({shop, url}) {
   return {
     title: shop?.name,
-    titleTemplate: '%s | Disposables Plug',
+    titleTemplate: '%s | DisposablesPlug',
     description: truncate(shop?.description ?? ''),
     handle: '@shopify',
     url,
@@ -34,7 +34,7 @@ function root({shop, url}) {
 function home() {
   return {
     title: 'Home',
-    titleTemplate: '%s | Disposables Plug',
+    titleTemplate: '%s | DisposablesPlug',
     description: 'Your reliable plug for disposables.',
     robots: {
       noIndex: false,

@@ -1,4 +1,5 @@
 node_modules
+ui_images
 /.cache
 /build
 /dist
@@ -7,3 +8,4 @@ node_modules
 .env
 /app/styles/app.css
 .vscode
+

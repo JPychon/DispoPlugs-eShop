@@ -1,4 +1,4 @@
-import {useRef, Suspense, useMemo} from 'react';
+import {useRef, Suspense, useMemo, useState, useEffect} from 'react';
 import {Disclosure, Listbox} from '@headlessui/react';
 import {defer} from '@shopify/remix-oxygen';
 import {
@@ -9,7 +9,7 @@ import {
   useTransition,
 } from '@remix-run/react';
 
-import {AnalyticsPageType, Money, ShopPayButton} from '@shopify/hydrogen';
+import {AnalyticsPageType, Image, Money, ShopPayButton} from '@shopify/hydrogen';
 import {
   Heading,
   IconCaret,
@@ -23,6 +23,7 @@ import {
   Link,
   AddToCartButton,
   Button,
+  ProductCard,
 } from '~/components';
 import {getExcerpt} from '~/lib/utils';
 import {seoPayload} from '~/lib/seo.server';
@@ -100,15 +101,17 @@ export async function loader({params, request, context}) {
 
 export default function Product() {
   const {product, shop, recommended} = useLoaderData();
-  const {media, title, vendor, descriptionHtml} = product;
+  const {title, vendor, descriptionHtml} = product;
   const {shippingPolicy, refundPolicy} = shop;
-
+  const [currentSearchParams] = useSearchParams();
+  
   return (
     <>
       <Section padding="x" className="px-0">
         <div className="grid items-start md:gap-6 lg:gap-20 md:grid-cols-2 lg:grid-cols-3">
-          <ProductGallery
-            media={media.nodes}
+          <ProductCard
+            product={product}
+            onClick={currentSearchParams}
             className="w-screen md:w-full lg:col-span-2"
           />
           <div className="sticky md:-mb-nav md:top-nav md:-translate-y-nav md:h-screen md:pt-nav hiddenScroll md:overflow-y-scroll">
@@ -121,7 +124,7 @@ export default function Product() {
                   <Text className={'opacity-50 font-medium'}>{vendor}</Text>
                 )}
               </div>
-              <ProductForm />
+              <ProductForm variant={product.selectedVariant}/>
               <div className="grid gap-4 py-4">
                 {descriptionHtml && (
                   <ProductDetail
@@ -162,35 +165,22 @@ export default function Product() {
   );
 }
 
-export function ProductForm() {
-  const {product, analytics, storeDomain} = useLoaderData();
+export function ProductForm({variant}) {
+  const { product, analytics, storeDomain } = useLoaderData();
 
   const [currentSearchParams] = useSearchParams();
   const transition = useTransition();
 
-  /**
-   * We update `searchParams` with in-flight request data from `transition` (if available)
-   * to create an optimistic UI, e.g. check the product option before the
-   * request has completed.
-   */
   const searchParams = useMemo(() => {
-    return transition.location
-      ? new URLSearchParams(transition.location.search)
-      : currentSearchParams;
+    return transition.location ? new URLSearchParams(transition.location.search) : currentSearchParams;
   }, [currentSearchParams, transition]);
 
   const firstVariant = product.variants.nodes[0];
 
-  /**
-   * We're making an explicit choice here to display the product options
-   * UI with a default variant, rather than wait for the user to select
-   * options first. Developers are welcome to opt-out of this behavior.
-   * By default, the first variant's options are used.
-   */
   const searchParamsWithDefaults = useMemo(() => {
     const clonedParams = new URLSearchParams(searchParams);
 
-    for (const {name, value} of firstVariant.selectedOptions) {
+    for (const { name, value } of firstVariant.selectedOptions) {
       if (!searchParams.has(name)) {
         clonedParams.set(name, value);
       }
@@ -199,11 +189,6 @@ export function ProductForm() {
     return clonedParams;
   }, [searchParams, firstVariant.selectedOptions]);
 
-  /**
-   * Likewise, we're defaulting to the first variant for purposes
-   * of add to cart if there is none returned from the loader.
-   * A developer can opt out of this, too.
-   */
   const selectedVariant = product.selectedVariant ?? firstVariant;
   const isOutOfStock = !selectedVariant?.availableForSale;
 
@@ -224,27 +209,34 @@ export function ProductForm() {
           options={product.options}
           searchParamsWithDefaults={searchParamsWithDefaults}
         />
-        {selectedVariant && (
+        {variant && (
           <div className="grid items-stretch gap-4">
+            <Image
+              key={variant.id}
+              alt={variant.image?.altText || product.title}
+              className="w-full"
+              loaderOptions={{
+                  crop: 'center',
+                  scale: 2,
+                  width: 320,
+                  height: 400,
+                }}
+              data={variant.image}
+            />
             {isOutOfStock ? (
               <Button variant="secondary" disabled>
                 <Text>Sold out</Text>
               </Button>
             ) : (
               <AddToCartButton
-                lines={[
-                  {
-                    merchandiseId: selectedVariant.id,
-                    quantity: 1,
-                  },
-                ]}
+                lines={[{merchandiseId: selectedVariant.id, quantity: 1,},]}
                 variant="primary"
                 data-test="add-to-cart"
                 analytics={{
                   products: [productAnalytics],
                   totalValue: parseFloat(productAnalytics.price),
                 }}
-              >
+                >
                 <Text
                   as="span"
                   className="flex items-center justify-center gap-2"

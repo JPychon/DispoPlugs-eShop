@@ -17,10 +17,8 @@ export function ProductCard({
   const cardProduct = product?.variants ? product : getProductPlaceholder();
   if (!cardProduct?.variants?.nodes?.length) return null;
 
-  const firstVariant = flattenConnection(cardProduct.variants)[0];
-
-  if (!firstVariant) return null;
-  const {image, price, compareAtPrice} = firstVariant;
+  const selectedVariant = flattenConnection(cardProduct.variants)[0];
+  const { image, price, compareAtPrice } = selectedVariant;
 
   if (label) {
     cardLabel = label;
@@ -32,11 +30,11 @@ export function ProductCard({
 
   const productAnalytics = {
     productGid: product.id,
-    variantGid: firstVariant.id,
+    variantGid: selectedVariant.id,
     name: product.title,
-    variantName: firstVariant.title,
+    variantName: selectedVariant.title,
     brand: product.vendor,
-    price: firstVariant.price.amount,
+    price: selectedVariant.price.amount,
     quantity: 1,
   };
 
@@ -52,14 +50,13 @@ export function ProductCard({
             {image && (
               <Image
                 className="aspect-[4/5] w-full object-cover fadeIn"
-                widths={[320]}
-                sizes="320px"
                 loaderOptions={{
                   crop: 'center',
                   scale: 2,
-                  width: 320,
-                  height: 400,
+                  width: 600,
+                  height: 600,
                 }}
+                
                 data={image}
                 alt={image.altText || `Picture of ${product.title}`}
                 loading={loading}
@@ -99,7 +96,7 @@ export function ProductCard({
           lines={[
             {
               quantity: 1,
-              merchandiseId: firstVariant.id,
+              merchandiseId: selectedVariant.id,
             },
           ]}
           variant="secondary"

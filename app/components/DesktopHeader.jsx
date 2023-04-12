@@ -19,13 +19,13 @@ export function DesktopHeader({isHome, menu, openCart, title}) {
         role="banner"
         className={`${
           isHome
-            ? 'bg-primary/80 dark:bg-contrast/60 text-contrast dark:text-primary shadow-darkHeader mt-6'
-            : 'bg-contrast/80 text-primary'
+            ? 'bg-primary/5 dark:bg-contrast/60 text-contrast dark:text-primary shadow-darkHeader mt-6'
+            : 'bg-primary/5 dark:bg-contrast/60 text-contrast  dark:text-primary shadow-darkHeader mt-6'
         } ${
           !isHome && y > 50 && ' shadow-lightHeader'
-        } hidden h-nav lg:flex items-center sticky transition duration-300 backdrop-blur-lg z-40 top-0 justify-between w-full leading-none gap-8 px-12 py-8`}
+        } hidden h-nav lg:flex items-center sticky transition duration-300  z-40 top-0 justify-between w-full leading-none gap-8 px-12 py-8`}
       >
-        <div className="flex gap-12">
+        <div className="flex gap-12 mt-6">
           <Link className="font-bold" to="/" prefetch="intent">
             {title}
           </Link>
@@ -46,7 +46,7 @@ export function DesktopHeader({isHome, menu, openCart, title}) {
             ))}
           </nav>
         </div>
-        <div className="flex items-center gap-1">
+        <div className="flex items-center gap-1 mt-6">
           <Form
             method="get"
             action={params.lang ? `/${params.lang}/search` : '/search'}

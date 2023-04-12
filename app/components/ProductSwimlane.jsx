@@ -1,4 +1,4 @@
-import {ProductCard, Section} from '~/components';
+import {Grid, ProductCard, Section} from '~/components';
 
 const mockProducts = new Array(12).fill('');
 
@@ -9,8 +9,8 @@ export function ProductSwimlane({
   ...props
 }) {
   return (
-    <Section heading={title} padding="y" {...props}>
-      <div className="swimlane hiddenScroll md:pb-8 md:scroll-px-8 lg:scroll-px-12 md:px-8 lg:px-12">
+    <Section className="ml-6" heading={title} padding="y" {...props}>
+      <Grid layout="products" items={4}>
         {products.map((product) => (
           <ProductCard
             product={product}
@@ -18,7 +18,7 @@ export function ProductSwimlane({
             className="snap-start w-80"
           />
         ))}
-      </div>
+      </Grid>
     </Section>
   );
 }

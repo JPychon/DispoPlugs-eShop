@@ -129,7 +129,7 @@ function CartLines({layout = 'drawer', lines: cartLines}) {
       aria-labelledby="cart-contents"
       className={className}
     >
-      <ul className="grid gap-6 md:gap-10">
+      <ul className="grid gap-6 md:gap-10 mt-6">
         {currentLines.map((line) => (
           <CartLineItem key={line.id} line={line} />
         ))}
@@ -156,7 +156,7 @@ function CartCheckoutActions({checkoutUrl}) {
 function CartSummary({cost, layout, children = null}) {
   const summary = {
     drawer: 'grid gap-4 p-6 border-t md:px-12',
-    page: 'sticky top-nav grid gap-6 p-4 md:px-6 md:translate-y-4 bg-primary/5 rounded w-full',
+    page: 'sticky top-nav grid gap-6 p-4 md:px-6 md:translate-y-4 bg-clear_contrast rounded w-full',
   };
 
   return (
@@ -347,12 +347,12 @@ export function CartEmpty({hidden = false, layout = 'drawer', onClose}) {
   return (
     <div ref={scrollRef} className={container[layout]} hidden={hidden}>
       <section className="grid gap-6">
-        <Text format>
+        <Text size='display' color={'darkblue'} className='mt-4' format>
           Looks like you haven&rsquo;t added anything yet, let&rsquo;s get you
           started!
         </Text>
         <div>
-          <Button onClick={onClose}>Continue shopping</Button>
+          <Button variant='inline' onClick={onClose}>Continue shopping</Button>
         </div>
       </section>
       <section className="grid gap-8 pt-16">

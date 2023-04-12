@@ -5,7 +5,7 @@ import {missingClass, formatText} from '~/lib/utils';
 export function Text({
   as: Component = 'span',
   className,
-  color = 'default',
+  color,
   format,
   size = 'copy',
   width = 'default',
@@ -18,6 +18,8 @@ export function Text({
     subtle: 'text-primary/50',
     notice: 'text-notice',
     contrast: 'text-contrast/90',
+    light: '#fafafa',
+    darkblue: '#020617',
   };
 
   const sizes = {
@@ -50,7 +52,7 @@ export function Text({
 export function Heading({
   as: Component = 'h2',
   children,
-  className = '',
+  className,
   format,
   size = 'heading',
   width = 'default',

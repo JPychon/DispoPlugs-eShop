@@ -14,7 +14,7 @@ export function MenuMobileNav({menu, onClose}) {
                 isActive ? 'pb-1 border-b -mb-px' : 'pb-1'
               }
             >
-              <Text as="span" size="copy">
+              <Text as="span" size="copy" color='text-light'>
                 {item.title}
               </Text>
             </Link>
