@@ -1557,6 +1557,9 @@ select{
 .pointer-events-none{
   pointer-events: none;
 }
+.invisible{
+  visibility: hidden;
+}
 .static{
   position: static;
 }
@@ -1582,9 +1585,6 @@ select{
   top: 0px;
   bottom: 0px;
 }
-.bottom-0{
-  bottom: 0px;
-}
 .bottom-1{
   bottom: 0.25rem;
 }
@@ -1605,9 +1605,6 @@ select{
 }
 .top-36{
   top: 9rem;
-}
-.top-\[6rem\]{
-  top: 6rem;
 }
 .top-nav{
   top: 3rem;
@@ -1683,6 +1680,9 @@ select{
 }
 .mr-3{
   margin-right: 0.75rem;
+}
+.mr-4{
+  margin-right: 1rem;
 }
 .mt-1{
   margin-top: 0.25rem;
@@ -1824,12 +1824,6 @@ select{
 .w-80{
   width: 20rem;
 }
-.w-\[80vw\]{
-  width: 80vw;
-}
-.w-\[90vw\]{
-  width: 90vw;
-}
 .w-auto{
   width: auto;
 }
@@ -1854,14 +1848,8 @@ select{
 .max-w-0{
   max-width: 0rem;
 }
-.max-w-6xl{
-  max-width: 72rem;
-}
 .max-w-7xl{
   max-width: 80rem;
-}
-.max-w-\[400px\]{
-  max-width: 400px;
 }
 .max-w-full{
   max-width: 100%;
@@ -2054,23 +2042,11 @@ select{
   margin-left: calc(1.5rem * (1 - var(--tw-space-x-reverse)));
   margin-left: calc(1.5rem * calc(1 - var(--tw-space-x-reverse)));
 }
-.space-y-2 > :not([hidden]) ~ :not([hidden]){
-  --tw-space-y-reverse: 0;
-  margin-top: calc(0.5rem * (1 - var(--tw-space-y-reverse)));
-  margin-top: calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));
-  margin-bottom: calc(0.5rem * var(--tw-space-y-reverse));
-}
 .space-y-3 > :not([hidden]) ~ :not([hidden]){
   --tw-space-y-reverse: 0;
   margin-top: calc(0.75rem * (1 - var(--tw-space-y-reverse)));
   margin-top: calc(0.75rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(0.75rem * var(--tw-space-y-reverse));
-}
-.space-y-7 > :not([hidden]) ~ :not([hidden]){
-  --tw-space-y-reverse: 0;
-  margin-top: calc(1.75rem * (1 - var(--tw-space-y-reverse)));
-  margin-top: calc(1.75rem * calc(1 - var(--tw-space-y-reverse)));
-  margin-bottom: calc(1.75rem * var(--tw-space-y-reverse));
 }
 .divide-y > :not([hidden]) ~ :not([hidden]){
   --tw-divide-y-reverse: 0;
@@ -2089,6 +2065,9 @@ select{
 .self-end{
   align-self: flex-end;
 }
+.self-center{
+  align-self: center;
+}
 .self-stretch{
   align-self: stretch;
 }
@@ -2106,9 +2085,6 @@ select{
 }
 .overflow-y-auto{
   overflow-y: auto;
-}
-.overflow-x-scroll{
-  overflow-x: scroll;
 }
 .overflow-y-scroll{
   overflow-y: scroll;
@@ -2136,8 +2112,8 @@ select{
 .rounded-full{
   border-radius: 9999px;
 }
-.rounded-md{
-  border-radius: 0.375rem;
+.rounded-lg{
+  border-radius: 0.5rem;
 }
 .rounded-sm{
   border-radius: 0.125rem;
@@ -2152,9 +2128,6 @@ select{
 }
 .border{
   border-width: 1px;
-}
-.border-2{
-  border-width: 2px;
 }
 .border-x-0{
   border-left-width: 0px;
@@ -2197,10 +2170,6 @@ select{
 .border-gray-500{
   --tw-border-opacity: 1;
   border-color: rgba(107, 114, 128, var(--tw-border-opacity));
-}
-.border-neutral-50{
-  --tw-border-opacity: 1;
-  border-color: rgba(250, 250, 250, var(--tw-border-opacity));
 }
 .border-primary{
   --tw-border-opacity: 1;
@@ -2250,10 +2219,6 @@ select{
 .bg-contrast\/80{
   background-color: rgba(250, 250, 249, 0.8);
   background-color: rgb(var(--color-contrast) / 0.8);
-}
-.bg-gray-100{
-  --tw-bg-opacity: 1;
-  background-color: rgba(243, 244, 246, var(--tw-bg-opacity));
 }
 .bg-gray-50{
   --tw-bg-opacity: 1;
@@ -2326,9 +2291,6 @@ select{
 .object-center{
   -o-object-position: center;
      object-position: center;
-}
-.p-0{
-  padding: 0px;
 }
 .p-1{
   padding: 0.25rem;
@@ -2469,6 +2431,10 @@ select{
 .align-middle{
   vertical-align: middle;
 }
+.text-2xl{
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
 .text-4xl{
   font-size: 2.25rem;
   line-height: 2.5rem;
@@ -2509,10 +2475,6 @@ select{
   font-size: 0.875rem;
   line-height: 1.25rem;
 }
-.text-xl{
-  font-size: 1.25rem;
-  line-height: 1.75rem;
-}
 .text-xs{
   font-size: 0.75rem;
   line-height: 1rem;
@@ -2531,9 +2493,6 @@ select{
 }
 .uppercase{
   text-transform: uppercase;
-}
-.leading-10{
-  line-height: 2.5rem;
 }
 .leading-\[3rem\]{
   line-height: 3rem;
@@ -2615,10 +2574,6 @@ select{
   --tw-text-opacity: 1;
   color: rgba(250, 250, 249, var(--tw-text-opacity));
 }
-.text-white{
-  --tw-text-opacity: 1;
-  color: rgba(255, 255, 255, var(--tw-text-opacity));
-}
 .underline{
   text-decoration-line: underline;
 }
@@ -2650,12 +2605,6 @@ select{
 .shadow-lightHeader{
   --tw-shadow: inset 0px -1px 0px 0px rgba(21, 21, 21, 0.05);
   --tw-shadow-colored: inset 0px -1px 0px 0px var(--tw-shadow-color);
-  box-shadow: 0 0 rgba(0,0,0,0), 0 0 rgba(0,0,0,0), var(--tw-shadow);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 rgba(0,0,0,0)), var(--tw-ring-shadow, 0 0 rgba(0,0,0,0)), var(--tw-shadow);
-}
-.shadow-sm{
-  --tw-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-  --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);
   box-shadow: 0 0 rgba(0,0,0,0), 0 0 rgba(0,0,0,0), var(--tw-shadow);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 rgba(0,0,0,0)), var(--tw-ring-shadow, 0 0 rgba(0,0,0,0)), var(--tw-shadow);
 }
@@ -3629,6 +3578,10 @@ shop-pay-button {
 }
 @media (min-width: 32em){
 
+  .sm\:invisible{
+    visibility: hidden;
+  }
+
   .sm\:bottom-auto{
     bottom: auto;
   }
@@ -3641,6 +3594,10 @@ shop-pay-button {
   .sm\:my-12{
     margin-top: 3rem;
     margin-bottom: 3rem;
+  }
+
+  .sm\:mb-0{
+    margin-bottom: 0px;
   }
 
   .sm\:mt-0{
@@ -3697,10 +3654,6 @@ shop-pay-button {
 
   .sm\:grid-cols-3{
     grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-
-  .sm\:grid-cols-4{
-    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
   .sm\:items-center{
@@ -3764,12 +3717,16 @@ shop-pay-button {
 }
 @media (min-width: 48em){
 
-  .md\:sticky{
-    position: sticky;
+  .md\:visible{
+    visibility: visible;
   }
 
-  .md\:top-\[65px\]{
-    top: 65px;
+  .md\:invisible{
+    visibility: hidden;
+  }
+
+  .md\:sticky{
+    position: sticky;
   }
 
   .md\:top-nav{
@@ -3806,6 +3763,10 @@ shop-pay-button {
 
   .md\:mb-0{
     margin-bottom: 0px;
+  }
+
+  .md\:mr-6{
+    margin-right: 1.5rem;
   }
 
   .md\:mt-16{
@@ -3890,10 +3851,6 @@ shop-pay-button {
     min-width: 240px;
   }
 
-  .md\:max-w-\[24rem\]{
-    max-width: 24rem;
-  }
-
   .md\:max-w-sm{
     max-width: 24rem;
   }
@@ -3975,10 +3932,6 @@ shop-pay-button {
 
   .md\:overflow-x-auto{
     overflow-x: auto;
-  }
-
-  .md\:overflow-x-hidden{
-    overflow-x: hidden;
   }
 
   .md\:overflow-y-scroll{
@@ -4093,8 +4046,8 @@ shop-pay-button {
 }
 @media (min-width: 64em){
 
-  .lg\:top-\[8rem\]{
-    top: 8rem;
+  .lg\:visible{
+    visibility: visible;
   }
 
   .lg\:col-span-2{
@@ -4185,8 +4138,8 @@ shop-pay-button {
 }
 @media (min-width: 80em){
 
-  .xl\:top-\[10rem\]{
-    top: 10rem;
+  .xl\:visible{
+    visibility: visible;
   }
 
   .xl\:aspect-\[2\/1\]{

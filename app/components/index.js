@@ -23,5 +23,15 @@ export {Grid} from './Grid';
 export {FeaturedProducts} from './FeaturedProducts';
 export {Pagination, getPaginationVariables, usePagination} from './Pagination';
 export {AddToCartButton} from './AddToCartButton';
+export {MobileHeader} from './MobileHeader';
+export {DesktopHeader} from './DesktopHeader';
+export {AccountLink} from './AccountLink';
+export {CartCount} from './CartCount';
+export {Footer} from './Footer';
+export {MenuMobileNav} from './MenuMobileNav';
+export {CartDrawer} from './CartDrawer';
+export {MenuDrawer} from './MenuDrawer';
+export {CustomFooter} from './CustomFooter';
+export {WarningBanner} from './WarningBanner';
 // Sue me
 export * from './Icon';
