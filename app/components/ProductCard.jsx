@@ -53,7 +53,7 @@ export function ProductCard({
                 loaderOptions={{
                   crop: 'center',
                   scale: 2,
-                  width: 600,
+                  width: 360,
                   height: 600,
                 }}
                 

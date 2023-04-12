@@ -107,7 +107,7 @@ export default function Product() {
   
   return (
     <>
-      <Section padding="x" className="px-0">
+      <Section padding="x" className="px-0 overflow-hidden justify-center">
         <div className="grid items-start md:gap-6 lg:gap-20 md:grid-cols-2 lg:grid-cols-3">
           <ProductCard
             product={product}
@@ -151,16 +151,6 @@ export default function Product() {
           </div>
         </div>
       </Section>
-      <Suspense fallback={<Skeleton className="h-32" />}>
-        <Await
-          errorElement="There was a problem loading related products"
-          resolve={recommended}
-        >
-          {(products) => (
-            <ProductSwimlane title="Related Products" products={products} />
-          )}
-        </Await>
-      </Suspense>
     </>
   );
 }
@@ -203,8 +193,8 @@ export function ProductForm({variant}) {
   };
 
   return (
-    <div className="grid gap-10">
-      <div className="grid gap-4">
+    <div className="grid gap-10 mr-10">
+      <div className="grid gap-4 mr-10">
         <ProductOptions
           options={product.options}
           searchParamsWithDefaults={searchParamsWithDefaults}
@@ -283,7 +273,7 @@ function ProductOptions({options, searchParamsWithDefaults}) {
             key={option.name}
             className="flex flex-col flex-wrap mb-4 gap-y-2 last:mb-0"
           >
-            <Heading as="legend" size="lead" className="min-w-[4rem]">
+            <Heading as="legend" size="lead" className="min-w-[4rem] text-center">
               {option.name}
             </Heading>
             <div className="flex flex-wrap items-baseline gap-4">
@@ -316,7 +306,7 @@ function ProductOptions({options, searchParamsWithDefaults}) {
                         </Listbox.Button>
                         <Listbox.Options
                           className={clsx(
-                            'border-primary bg-contrast absolute bottom-12 z-30 grid h-48 w-full overflow-y-scroll rounded-t border px-2 py-2 transition-[max-height] duration-150 sm:bottom-auto md:rounded-b md:rounded-t-none md:border-t-0 md:border-b',
+                            'border-primary bg-clear_contrast text-light absolute bottom-12 z-30 grid h-48 w-full overflow-y-scroll rounded-t border px-2 py-2 transition-[max-height] duration-150 sm:bottom-auto md:rounded-b md:rounded-t-none md:border-t-0 md:border-b',
                             open ? 'max-h-48' : 'max-h-0',
                           )}
                         >

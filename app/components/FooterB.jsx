@@ -1,7 +1,7 @@
 export function FooterB() {
     return(
-    <footer className="grid bg-primary dark:bg-contrast dark:text-primary text-contrast items-start grid-flow-row w-full">
-        <div className="mx-auto w-full px-12 lg:py-8 mt-6 mb-2">
+    <footer className="grid bg-primary dark:bg-primary dark:text-contrast text-contrast items-start grid-flow-row w-full bottom-0">
+        <div className="mx-auto w-full px-12 lg:py-8 mt-6">
             <div className="md:flex md:justify-between">
             <div className="mb-6 md:mb-0">
                 <a href="https://disposablesplug.com/" className="flex items-center">
