@@ -6,9 +6,8 @@ import {
   CartCount,
   WarningBanner,
 } from '~/components';
-import {useParams, Form, useLoaderData} from '@remix-run/react';
+import {useParams, Form} from '@remix-run/react';
 import {useWindowScroll} from 'react-use';
-import {Image} from '@shopify/hydrogen';
 
 export function DesktopHeader({isHome, menu, openCart}) {
     const params = useParams();
