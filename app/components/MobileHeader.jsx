@@ -64,7 +64,7 @@ export function MobileHeader({title, isHome, openCart, openMenu}) {
           </Heading>*/}
           <img
                 src="https://cdn.shopify.com/s/files/1/0745/8501/4570/files/logo.png?v=1681790728"
-                className='w-max h-max'
+                className='w-max object-cover'
             />
         </Link>
   
