@@ -1,12 +1,11 @@
 export function FooterB() {
     return(
-    <footer className="grid bg-primary dark:bg-primary dark:text-contrast text-contrast items-start grid-flow-row w-full bottom-0">
+    <footer className="grid bg-primary dark:bg-primary dark:text-contrast text-contrast items-start grid-flow-row w-full inset-x-0 bottom-0">
         <div className="mx-auto w-full px-12 lg:py-8 mt-6">
             <div className="md:flex md:justify-between">
             <div className="mb-6 md:mb-0">
                 <a href="https://disposablesplug.com/" className="flex items-center">
-                    {/*<img src="https://flowbite.com/docs/images/logo.svg" className="h-8 mr-3" alt="Disposables Plug Logo" />*/}
-                    <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Disposables Plug</span>
+                    <img src="https://cdn.shopify.com/s/files/1/0745/8501/4570/files/logo.png?v=1681790728" className="lg:h-48 md:h-28 sm:mr-3 object-cover" alt="Disposables Plug Logo" />
                 </a>
             </div>
             <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
@@ -46,7 +45,7 @@ export function FooterB() {
             </div>
         </div>
         <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
-        <div className="sm:flex sm:items-center sm:justify-between">
+        <div className="sm:flex sm:items-center sm:justify-between mb-10">
             <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a href="https://disposablesplug.com/" className="hover:underline">Disposables Plug</a>. All Rights Reserved.
             </span>
             <div className="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
