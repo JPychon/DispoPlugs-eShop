@@ -19,8 +19,8 @@ export function MobileHeader({title, isHome, openCart, openMenu}) {
         role="banner"
         className={`${
           isHome
-            ? 'bg-primary/5 dark:bg-contrast/60 text-contrast dark:text-primary shadow-darkHeader'
-            : 'bg-primary/5 dark:bg-contrast/60 text-contrast dark:text-primary shadow-darkHeader'
+            ? 'bg-primary_opacity/5 dark:bg-contrast/60 text-contrast dark:text-primary shadow-darkHeader'
+            : 'bg-primary_opacity/5 dark:bg-contrast/60 text-contrast dark:text-primary shadow-darkHeader'
         } flex lg:hidden items-center h-nav sticky backdrop-blur-lg z-40 top-0 justify-between w-full leading-none gap-4 px-4 md:px-8`}
       >
         <div className="flex items-center justify-start w-full gap-4">
@@ -64,7 +64,7 @@ export function MobileHeader({title, isHome, openCart, openMenu}) {
           </Heading>*/}
           <img
                 src="https://cdn.shopify.com/s/files/1/0745/8501/4570/files/logo.png?v=1681790728"
-                className='w-max object-cover'
+                className='w-max object-cover my-0 py-0 '
             />
         </Link>
   

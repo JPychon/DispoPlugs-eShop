@@ -18,8 +18,8 @@ export function DesktopHeader({isHome, menu, openCart}) {
         role="banner"
         className={`${
           isHome
-            ? 'bg-primary dark:bg-contrast/60 text-primary dark:text-primary shadow-darkHeader mt-6'
-            : 'bg-primary dark:bg-contrast/60 text-primary dark:text-primary shadow-darkHeader mt-6'
+            ? 'bg-primary/5 dark:bg-contrast/60 text-contrast dark:text-primary shadow-darkHeader mt-6'
+            : 'bg-primary/5 dark:bg-contrast/60 text-contrast dark:text-primary shadow-darkHeader mt-6'
         } ${
           !isHome && y > 50 && ' shadow-lightHeader'
         } fixed hidden h-nav lg:flex items-center sticky transition duration-300 z-40 top-0 justify-between w-full leading-none gap-8 px-12 py-8`}

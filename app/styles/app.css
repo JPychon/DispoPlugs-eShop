@@ -1809,6 +1809,10 @@ select{
   margin-left: auto;
   margin-right: auto;
 }
+.my-0{
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
 .my-24{
   margin-top: 6rem;
   margin-bottom: 6rem;
@@ -1820,10 +1824,6 @@ select{
 .my-8{
   margin-top: 2rem;
   margin-bottom: 2rem;
-}
-.mx-2{
-  margin-left: 0.5rem;
-  margin-right: 0.5rem;
 }
 .-mb-px{
   margin-bottom: -1px;
@@ -1969,19 +1969,6 @@ select{
   height: calc(100vh - 3rem);
   height: calc(var(--screen-height, 100vh) - var(--height-nav));
 }
-.h-12{
-  height: 3rem;
-}
-.h-20{
-  height: 5rem;
-}
-.h-32{
-  height: 8rem;
-}
-.h-max{
-  height: -moz-max-content;
-  height: max-content;
-}
 .max-h-0{
   max-height: 0px;
 }
@@ -2033,15 +2020,15 @@ select{
 .w-full{
   width: 100%;
 }
+.w-max{
+  width: -moz-max-content;
+  width: max-content;
+}
 .w-mobileGallery{
   width: calc(100vw - 3rem);
 }
 .w-screen{
   width: 100vw;
-}
-.w-max{
-  width: -moz-max-content;
-  width: max-content;
 }
 .min-w-\[0\.75rem\]{
   min-width: 0.75rem;
@@ -2457,6 +2444,9 @@ select{
 .bg-primary\/5{
   background-color: rgba(2, 6, 23, 0.05);
 }
+.bg-primary_opacity\/5{
+  background-color: rgb(var(#020617) / 0.05);
+}
 .bg-red-100{
   --tw-bg-opacity: 1;
   background-color: rgba(254, 226, 226, var(--tw-bg-opacity));
@@ -2494,17 +2484,9 @@ select{
 .bg-center{
   background-position: center;
 }
-.object-contain{
-  -o-object-fit: contain;
-     object-fit: contain;
-}
 .object-cover{
   -o-object-fit: cover;
      object-fit: cover;
-}
-.object-fill{
-  -o-object-fit: fill;
-     object-fit: fill;
 }
 .object-center{
   -o-object-position: center;
@@ -2549,6 +2531,10 @@ select{
 .px-\[0\.125rem\]{
   padding-left: 0.125rem;
   padding-right: 0.125rem;
+}
+.py-0{
+  padding-top: 0px;
+  padding-bottom: 0px;
 }
 .py-1{
   padding-top: 0.25rem;
