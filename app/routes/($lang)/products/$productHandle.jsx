@@ -17,6 +17,8 @@ import {
   IconClose,
   ProductGallery,
   ProductSwimlane,
+  ProductDisplayCard,
+  ProductDisplayLane,
   Section,
   Skeleton,
   Text,
@@ -39,6 +41,10 @@ export async function loader({params, request, context}) {
   invariant(productHandle, 'Missing productHandle param, check route filename');
 
   const searchParams = new URL(request.url).searchParams;
+  if (!searchParams.has('Flavor')) {
+    searchParams.append('Flavor', 'Default');
+  }
+  
 
   const selectedOptions = [];
   searchParams.forEach((value, name) => {
@@ -107,25 +113,19 @@ export default function Product() {
   
   return (
     <>
-      <Section padding="x" className="px-0 overflow-hidden justify-center">
-        <div className="grid items-start md:gap-6 lg:gap-20 md:grid-cols-2 lg:grid-cols-3">
-          <ProductCard
-            product={product}
-            onClick={currentSearchParams}
-            className="w-screen md:w-full lg:col-span-2"
-          />
-          <div className="sticky md:-mb-nav md:top-nav md:-translate-y-nav md:h-screen md:pt-nav hiddenScroll md:overflow-y-scroll">
-            <section className="flex flex-col w-full max-w-xl gap-8 p-6 md:mx-auto md:max-w-sm md:px-0">
-              <div className="grid gap-2">
-                <Heading as="h1" className="whitespace-normal">
-                  {title}
-                </Heading>
-                {vendor && (
-                  <Text className={'opacity-50 font-medium'}>{vendor}</Text>
-                )}
-              </div>
+      <Section padding="all" display='grid'>
+        <div className="grid sm:gap-6 md:gap-6 lg:gap-20 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-3">
+          {/*<ProductCard product={product} onClick={currentSearchParams} className="w-full"/>*/}
+          <ProductDisplayCard product={product}/>    
+          {/*<div className="sticky md:-mb-nav md:top-nav md:-translate-y-nav md:h-screen md:pt-nav hiddenScroll md:overflow-y-scroll">*/}
+          <section className="flex flex-col w-full max-w-xl gap-y-8 py-6 md:mx-auto md:max-w-sm md:px-0 col-span-1">
+            <div className="grid gap-4 py-4">
+              {/*<Heading/>*/}
               <ProductForm variant={product.selectedVariant}/>
-              <div className="grid gap-4 py-4">
+            </div>
+          </section>
+          <Section className="flex flex-col w-full max-w-xl gap-y8 py-6 md:mx-auto md:max-w-sm md:px-0 col-span-1">
+            <div className="grid gap-4 py-4">
                 {descriptionHtml && (
                   <ProductDetail
                     title="Product Details"
@@ -147,10 +147,19 @@ export default function Product() {
                   />
                 )}
               </div>
-            </section>
-          </div>
+            </Section>
         </div>
       </Section>
+      <Suspense fallback="Loading related products...">
+        <Await
+          errorElement="There was a problem loading related products"
+          resolve={recommended}
+        >
+        {(products) => (
+            <ProductDisplayLane title="Related Products" products={products}/>
+            )}
+        </Await>
+      </Suspense>
     </>
   );
 }
@@ -193,8 +202,8 @@ export function ProductForm({variant}) {
   };
 
   return (
-    <div className="grid gap-10 mr-10">
-      <div className="grid gap-4 mr-10">
+    <div className="grid gap-10">
+      <div className="grid gap-4">
         <ProductOptions
           options={product.options}
           searchParamsWithDefaults={searchParamsWithDefaults}
@@ -219,19 +228,24 @@ export function ProductForm({variant}) {
               </Button>
             ) : (
               <AddToCartButton
-                lines={[{merchandiseId: selectedVariant.id, quantity: 1,},]}
-                variant="primary"
+                lines={[
+                  {
+                    merchandiseId: selectedVariant.id,
+                    quantity: 1,
+                  },
+                ]}
+                variant="secondary"
                 data-test="add-to-cart"
                 analytics={{
                   products: [productAnalytics],
                   totalValue: parseFloat(productAnalytics.price),
                 }}
-                >
+              >
                 <Text
                   as="span"
                   className="flex items-center justify-center gap-2"
                 >
-                  <span>Add to Bag</span> <span>·</span>{' '}
+                  <span>Add to Cart</span> <span>·</span>{' '}
                   <Money
                     withoutTrailingZeros
                     data={selectedVariant?.price}
@@ -248,13 +262,13 @@ export function ProductForm({variant}) {
                 </Text>
               </AddToCartButton>
             )}
-            {!isOutOfStock && (
+            {/*!isOutOfStock && (
               <ShopPayButton
                 width="100%"
                 variantIds={[selectedVariant?.id]}
                 storeDomain={storeDomain}
               />
-            )}
+            )*/}
           </div>
         )}
       </div>
@@ -277,15 +291,7 @@ function ProductOptions({options, searchParamsWithDefaults}) {
               {option.name}
             </Heading>
             <div className="flex flex-wrap items-baseline gap-4">
-              {/**
-               * First, we render a bunch of <Link> elements for each option value.
-               * When the user clicks one of these buttons, it will hit the loader
-               * to get the new data.
-               *
-               * If there are more than 7 values, we render a dropdown.
-               * Otherwise, we just render plain links.
-               */}
-              {option.values.length > 7 ? (
+              {option.values.length > 1 ? (
                 <div className="relative w-full">
                   <Listbox>
                     {({open}) => (
@@ -407,26 +413,26 @@ function ProductOptionLink({
 
 function ProductDetail({title, content, learnMore}) {
   return (
-    <Disclosure key={title} as="div" className="grid w-full gap-2">
+    <Disclosure key={title} as="div" className="grid w-full gap-2" defaultOpen>
       {({open}) => (
         <>
-          <Disclosure.Button className="text-left">
-            <div className="flex justify-between">
-              <Text size="lead" as="h4">
+          <Disclosure.Button className="text-left" disabled>
+            <div className="flex justify-center">
+              <Heading as="legend" size="lead">
                 {title}
-              </Text>
-              <IconClose
+              </Heading>
+              {/*<IconClose
                 className={clsx(
                   'transition-transform transform-gpu duration-200',
                   !open && 'rotate-[45deg]',
                 )}
-              />
+              />*/}
             </div>
           </Disclosure.Button>
 
           <Disclosure.Panel className={'pb-4 pt-2 grid gap-2'}>
             <div
-              className="prose dark:prose-invert"
+              className="prose prose-sm"
               dangerouslySetInnerHTML={{__html: content}}
             />
             {learnMore && (
@@ -505,7 +511,7 @@ const PRODUCT_QUERY = `#graphql
       selectedVariant: variantBySelectedOptions(selectedOptions: $selectedOptions) {
         ...ProductVariantFragment
       }
-      media(first: 7) {
+      media(first: 5) {
         nodes {
           ...Media
         }
@@ -558,7 +564,7 @@ const RECOMMENDED_PRODUCTS_QUERY = `#graphql
 
 async function getRecommendedProducts(storefront, productId) {
   const products = await storefront.query(RECOMMENDED_PRODUCTS_QUERY, {
-    variables: {productId, count: 12},
+    variables: {productId, count: 5},
   });
 
   invariant(products, 'No data returned from Shopify API');

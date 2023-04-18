@@ -10,6 +10,7 @@ import {routeHeaders, CACHE_SHORT} from '~/data/cache';
 
 export const headers = routeHeaders;
 
+
 export async function loader({params, context}) {
   const {language, country} = context.storefront.i18n;
 
@@ -17,13 +18,13 @@ export async function loader({params, context}) {
     params.lang &&
     params.lang.toLowerCase() !== `${language}-${country}`.toLowerCase()
   ) {
-    // If the lang URL param is defined, yet we still are on `EN-US`
-    // the the lang param must be invalid, send to the 404 page
     throw new Response(null, {status: 404});
   }
 
   const {shop, hero} = await context.storefront.query(HOMEPAGE_SEO_QUERY, {
-    variables: {handle: 'freestyle'},
+    variables: {
+      handle: 'advertisement'
+    },
   });
 
   const seo = seoPayload.home();
@@ -31,9 +32,8 @@ export async function loader({params, context}) {
   return defer(
     {
       shop,
+      files: context.storefront.query(HOMEPAGE_LOGO_QUERY),
       primaryHero: hero,
-      // These different queries are separated to illustrate how 3rd party content
-      // fetching can be optimized for both above and below the fold.
       featuredProducts: context.storefront.query(
         HOMEPAGE_FEATURED_PRODUCTS_QUERY,
         {
@@ -111,7 +111,7 @@ export default function Homepage() {
                 <ProductSwimlane
                   products={products.nodes}
                   title="New Arrivals & Featured Products"
-                  count={4}
+                  count={6}
                 />
               );
             }}
@@ -119,7 +119,7 @@ export default function Homepage() {
         </Suspense>
       )}
 
-      {secondaryHero && (
+      {/*secondaryHero && (
         <Suspense fallback={<Hero {...skeletons[1]} />}>
           <Await resolve={secondaryHero}>
             {({hero}) => {
@@ -128,9 +128,9 @@ export default function Homepage() {
             }}
           </Await>
         </Suspense>
-      )}
+      )*/}
 
-      {featuredCollections && (
+      {/*featuredCollections && (
         <Suspense>
           <Await resolve={featuredCollections}>
             {({collections}) => {
@@ -144,9 +144,9 @@ export default function Homepage() {
             }}
           </Await>
         </Suspense>
-      )}
+      )*/}
 
-      {tertiaryHero && (
+      {/*tertiaryHero && (
         <Suspense fallback={<Hero {...skeletons[2]} />}>
           <Await resolve={tertiaryHero}>
             {({hero}) => {
@@ -155,7 +155,7 @@ export default function Homepage() {
             }}
           </Await>
         </Suspense>
-      )}
+      )*/}
     </>
   );
 }
@@ -188,6 +188,25 @@ const COLLECTION_CONTENT_FRAGMENT = `#graphql
     }
   }
 `;
+
+const HOMEPAGE_LOGO_QUERY = `#graphql
+query {
+  files(first: 2) {
+    nodes {
+      ... on MediaImage {
+        id
+        image {
+          originalSrc: url
+          width
+          height
+          id
+        }
+      }
+    }
+  }
+}
+`;
+
 
 const HOMEPAGE_SEO_QUERY = `#graphql
   ${COLLECTION_CONTENT_FRAGMENT}

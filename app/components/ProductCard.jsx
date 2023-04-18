@@ -45,18 +45,15 @@ export function ProductCard({
         to={`/products/${product.handle}`}
         prefetch="intent"
       >
-        <div className={clsx('grid gap-4', className)}>
-          <div className="card-image aspect-[4/5] bg-primary/5">
+        <div className={clsx('', className)}>
+          <div className="card-image aspect-square bg-primary/5">
             {image && (
               <Image
                 className="aspect-[4/5] w-full object-cover fadeIn"
                 loaderOptions={{
                   crop: 'center',
                   scale: 2,
-                  width: 360,
-                  height: 600,
                 }}
-                
                 data={image}
                 alt={image.altText || `Picture of ${product.title}`}
                 loading={loading}
@@ -72,12 +69,12 @@ export function ProductCard({
           </div>
           <div className="grid gap-1">
             <Text
-              className="w-full overflow-hidden whitespace-nowrap text-center text-ellipsis font-black"
+              className="w-full overflow-hidden whitespace-nowrap text-center text-ellipsis font-bold"
               as="h3"
             >
               {product.title}
             </Text>
-            <div className="flex gap-4 justify-center font-medium ">
+            <div className="flex gap-4 justify-center font-medium">
               <Text className="flex gap-4">
                 <Money withoutTrailingZeros data={price} />
                 {isDiscounted(price, compareAtPrice) && (
@@ -93,6 +90,8 @@ export function ProductCard({
       </Link>
       {quickAdd && (
         <AddToCartButton
+          className="mt-2 w-full justify-items-center rounded bg-neutral-800 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-neutral-50 
+          shadow-[0_4px_9px_-4px_rgba(51,45,45,0.7)] transition duration-150 ease-in-out hover:bg-neutral-800 hover:shadow-[0_8px_9px_-4px_rgba(51,45,45,0.2),0_4px_18px_0_rgba(51,45,45,0.1)] focus:bg-neutral-800 focus:shadow-[0_8px_9px_-4px_rgba(51,45,45,0.2),0_4px_18px_0_rgba(51,45,45,0.1)] focus:outline-none focus:ring-0"
           lines={[
             {
               quantity: 1,
@@ -100,7 +99,7 @@ export function ProductCard({
             },
           ]}
           variant="secondary"
-          className="mt-2"
+          
           analytics={{
             products: [productAnalytics],
             totalValue: parseFloat(productAnalytics.price),

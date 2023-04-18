@@ -15,7 +15,7 @@ import {Heading, ProductCard, Skeleton, Text} from '~/components';
  */
 export function FeaturedProducts({
   count = 4,
-  heading = 'Shop Best Sellers',
+  heading = 'Best Sellers',
   layout = 'drawer',
   onClose,
   query,
@@ -38,7 +38,7 @@ export function FeaturedProducts({
 
   return (
     <>
-      <Heading format size="copy" className="t-4">
+      <Heading format size="copy" className="t-4 text-center">
         {heading}
       </Heading>
       <div

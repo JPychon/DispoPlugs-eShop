@@ -9,7 +9,7 @@ import {
   import {useIsHomePath} from '~/lib/utils';
   import {useCartFetchers} from '~/hooks/useCartFetchers';
 
-export function Header({title, menu}) {
+export function Header({title, menu, logo}) {
     const isHome = useIsHomePath();
   
     const {

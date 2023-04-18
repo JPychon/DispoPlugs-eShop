@@ -10,7 +10,7 @@ export function ProductSwimlane({
 }) {
   return (
     <Section className="justify-center" heading={title} padding="y" {...props}>
-      <Grid layout="products" items={4}>
+      <Grid layout="products" items={count}>
         {products.map((product) => (
           <ProductCard
             product={product}

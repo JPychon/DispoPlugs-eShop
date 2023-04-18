@@ -5,8 +5,8 @@ import {CartAction} from '~/lib/type';
 export function AddToCartButton({
   children,
   lines,
-  className = '',
-  variant = 'primary',
+  className = 'bg-primary text-secondary hover:bg-primary/9 shadow-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 text-base flex items-center justify-center leading-none text-white bg-gray-800 w-full py-4 hover:bg-gray-700 focus:outline-none',
+  variant = '',
   width = 'full',
   disabled,
   analytics,

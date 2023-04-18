@@ -346,19 +346,23 @@ export function CartEmpty({hidden = false, layout = 'drawer', onClose}) {
 
   return (
     <div ref={scrollRef} className={container[layout]} hidden={hidden}>
-      <section className="grid gap-6">
-        <Text size='display' color={'darkblue'} className='mt-4' format>
-          Looks like you haven&rsquo;t added anything yet, let&rsquo;s get you
-          started!
+      <section className="grid gap-6 justify-center mt-2">
+        <Text size='display' color={'darkblue'} className='mt-4 text-center' format>
+          You cart is empty.
         </Text>
         <div>
-          <Button variant='inline' onClick={onClose}>Continue shopping</Button>
+          <Button 
+          className="rounded bg-neutral-800 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-neutral-50 shadow-[0_4px_9px_-4px_rgba(51,45,45,0.7)] transition duration-150 ease-in-out hover:bg-neutral-800 hover:shadow-[0_8px_9px_-4px_rgba(51,45,45,0.2),0_4px_18px_0_rgba(51,45,45,0.1)] focus:bg-neutral-800 focus:shadow-[0_8px_9px_-4px_rgba(51,45,45,0.2),0_4px_18px_0_rgba(51,45,45,0.1)] focus:outline-none focus:ring-0 active:bg-neutral-900 active:shadow-[0_8px_9px_-4px_rgba(51,45,45,0.2),0_4px_18px_0_rgba(51,45,45,0.1)] dark:bg-neutral-900 dark:shadow-[0_4px_9px_-4px_#030202] dark:hover:bg-neutral-900 dark:hover:shadow-[0_8px_9px_-4px_rgba(3,2,2,0.3),0_4px_18px_0_rgba(3,2,2,0.2)] dark:focus:bg-neutral-900 dark:focus:shadow-[0_8px_9px_-4px_rgba(3,2,2,0.3),0_4px_18px_0_rgba(3,2,2,0.2)] dark:active:bg-neutral-900 dark:active:shadow-[0_8px_9px_-4px_rgba(3,2,2,0.3),0_4px_18px_0_rgba(3,2,2,0.2)]" 
+          onClick={onClose}
+          >
+          Continue Shopping 
+          </Button>
         </div>
       </section>
       <section className="grid gap-8 pt-16">
         <FeaturedProducts
           count={4}
-          heading="Shop Best Sellers"
+          heading="Best Sellers"
           layout={layout}
           onClose={onClose}
           sortKey="BEST_SELLING"

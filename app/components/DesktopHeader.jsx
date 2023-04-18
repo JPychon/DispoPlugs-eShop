@@ -6,12 +6,11 @@ import {
   CartCount,
   WarningBanner,
 } from '~/components';
-import {useParams, Form} from '@remix-run/react';
+import {useParams, Form, useLoaderData} from '@remix-run/react';
 import {useWindowScroll} from 'react-use';
+import {Image} from '@shopify/hydrogen';
 
-
-
-export function DesktopHeader({isHome, menu, openCart, title}) {
+export function DesktopHeader({isHome, menu, openCart}) {
     const params = useParams();
     const {y} = useWindowScroll();
     return (
@@ -19,15 +18,18 @@ export function DesktopHeader({isHome, menu, openCart, title}) {
         role="banner"
         className={`${
           isHome
-            ? 'bg-primary/5 dark:bg-contrast/60 text-contrast dark:text-primary shadow-darkHeader mt-6'
-            : 'bg-primary/5 dark:bg-contrast/60 text-contrast  dark:text-primary shadow-darkHeader mt-6'
+            ? 'bg-primary dark:bg-contrast/60 text-primary dark:text-primary shadow-darkHeader mt-6'
+            : 'bg-primary dark:bg-contrast/60 text-primary dark:text-primary shadow-darkHeader mt-6'
         } ${
           !isHome && y > 50 && ' shadow-lightHeader'
-        } hidden h-nav lg:flex items-center sticky transition duration-300  z-40 top-0 justify-between w-full leading-none gap-8 px-12 py-8`}
+        } fixed hidden h-nav lg:flex items-center sticky transition duration-300 z-40 top-0 justify-between w-full leading-none gap-8 px-12 py-8`}
       >
         <div className="flex gap-12 mt-6">
           <Link className="font-bold" to="/" prefetch="intent">
-            {title}
+            <img
+                src="https://cdn.shopify.com/s/files/1/0745/8501/4570/files/logo.png?v=1681790728"
+                className='w-full h-52 object-cover -ml-12'
+            />
           </Link>
           <nav className="flex gap-8">
             {/* Top level menu items */}
