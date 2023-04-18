@@ -16,6 +16,7 @@ module.exports = {
         /*primary: withOpacityValue('#fafafa'),*/
         /*contrast: withOpacityValue('#020617'),*/
         primary: '#020617',
+        primary_opacity:  withOpacityValue('#020617'),
         contrast: withOpacityValue('#fafafa'),
         clear_contrast:'#fafafa',
         notice: withOpacityValue('#c2410c'),
