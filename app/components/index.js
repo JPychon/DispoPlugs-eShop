@@ -36,4 +36,5 @@ export {MenuDrawer} from './MenuDrawer';
 export {WarningBanner} from './WarningBanner';
 export {ProductDisplayCard} from './ProductDisplayCard';
 export {Header} from './Header';
+export {CollectionSlider} from './CollectionSlider';
 export * from './Icon';

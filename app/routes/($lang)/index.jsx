@@ -1,12 +1,13 @@
 import {defer} from '@shopify/remix-oxygen';
 import {Suspense} from 'react';
 import {Await, useLoaderData} from '@remix-run/react';
-import {ProductSwimlane, FeaturedCollections, Hero} from '~/components';
+import {ProductSwimlane, FeaturedCollections, Hero, CollectionSlider, ProductGallery} from '~/components';
 import {MEDIA_FRAGMENT, PRODUCT_CARD_FRAGMENT} from '~/data/fragments';
 import {getHeroPlaceholder} from '~/lib/placeholders';
 import {seoPayload} from '~/lib/seo.server';
 import {AnalyticsPageType} from '@shopify/hydrogen';
 import {routeHeaders, CACHE_SHORT} from '~/data/cache';
+
 
 export const headers = routeHeaders;
 
@@ -50,7 +51,7 @@ export async function loader({params, context}) {
       ),
       secondaryHero: context.storefront.query(COLLECTION_HERO_QUERY, {
         variables: {
-          handle: 'backcountry',
+          handle: 'secondary',
           country,
           language,
         },
@@ -66,7 +67,7 @@ export async function loader({params, context}) {
       ),
       tertiaryHero: context.storefront.query(COLLECTION_HERO_QUERY, {
         variables: {
-          handle: 'winter-2022',
+          handle: 'third',
           country,
           language,
         },
@@ -98,9 +99,25 @@ export default function Homepage() {
 
   return (
     <>
+
       {primaryHero && (
         <Hero {...primaryHero} height="full" top loading="eager" />
       )}
+
+      {/*featuredCollections && (
+        <Suspense>
+          <Await resolve={featuredCollections}>
+            {({collections}) => {
+              if (!collections?.nodes) return <></>;
+              return (
+                <CollectionSlider
+                  collections={collections.nodes}
+                />
+              );
+            }}
+          </Await>
+        </Suspense>
+      )*/}
 
       {featuredProducts && (
         <Suspense>
@@ -111,7 +128,7 @@ export default function Homepage() {
                 <ProductSwimlane
                   products={products.nodes}
                   title="New Arrivals & Featured Products"
-                  count={6}
+                  count={8}
                 />
               );
             }}
@@ -237,7 +254,7 @@ export const HOMEPAGE_FEATURED_PRODUCTS_QUERY = `#graphql
   ${PRODUCT_CARD_FRAGMENT}
   query homepageFeaturedProducts($country: CountryCode, $language: LanguageCode)
   @inContext(country: $country, language: $language) {
-    products(first: 4) {
+    products(first: 8) {
       nodes {
         ...ProductCard
       }

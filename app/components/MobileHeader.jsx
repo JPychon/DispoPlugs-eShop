@@ -19,9 +19,9 @@ export function MobileHeader({title, isHome, openCart, openMenu}) {
         role="banner"
         className={`${
           isHome
-            ? 'bg-primary_opacity/5 dark:bg-contrast/60 text-contrast dark:text-primary shadow-darkHeader'
-            : 'bg-primary_opacity/5 dark:bg-contrast/60 text-contrast dark:text-primary shadow-darkHeader'
-        } flex lg:hidden items-center h-nav sticky backdrop-blur-lg z-40 top-0 justify-between w-full leading-none gap-4 px-4 md:px-8`}
+            ? 'bg-primary text-gray shadow-lg'
+            : 'bg-primary text-gray shadow-lg'
+        } flex lg:hidden items-center h-nav sticky z-40 top-0 justify-between w-full leading-none gap-4 px-4 md:px-8 fixed sm:mt-0 md:mt-0`}
       >
         <div className="flex items-center justify-start w-full gap-4">
           <button
@@ -44,8 +44,8 @@ export function MobileHeader({title, isHome, openCart, openMenu}) {
             <Input
               className={
                 isHome
-                  ? 'focus:border-contrast/20 dark:focus:border-primary/20'
-                  : 'focus:border-primary/20'
+                  ? 'text-lightGray focus:border-contrast/20'
+                  : 'text-lightGray focus:border-primary/20'
               }
               type="search"
               variant="minisearch"
@@ -63,8 +63,8 @@ export function MobileHeader({title, isHome, openCart, openMenu}) {
             {title}
           </Heading>*/}
           <img
-                src="https://cdn.shopify.com/s/files/1/0745/8501/4570/files/logo.png?v=1681790728"
-                className='w-max object-cover my-0 py-0 '
+                src="https://cdn.shopify.com/s/files/1/0745/8501/4570/files/small-logo.png?v=1681884207"
+                className='w-full h-fit object-cover'
             />
         </Link>
   

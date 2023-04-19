@@ -1,6 +1,6 @@
 import clsx from 'clsx';
 
-function Icon({children, className, fill = 'currentColor', stroke, ...props}) {
+function Icon({children, className, fill = '#f97316', stroke, ...props}) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -17,7 +17,7 @@ function Icon({children, className, fill = 'currentColor', stroke, ...props}) {
 
 export function IconMenu(props) {
   return (
-    <Icon {...props} stroke={props.stroke || 'currentColor'}>
+    <Icon {...props} stroke={props.stroke || '#f97316'}>
       <title>Menu</title>
       <line x1="3" y1="6.375" x2="17" y2="6.375" strokeWidth="1.25" />
       <line x1="3" y1="10.375" x2="17" y2="10.375" strokeWidth="1.25" />
@@ -142,11 +142,11 @@ export function IconLogin(props) {
       <g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
         <path
           d="M8,10.6928545 C10.362615,10.6928545 12.4860225,11.7170237 13.9504747,13.3456144 C12.4860225,14.9758308 10.362615,16 8,16 C5.63738499,16 3.51397752,14.9758308 2.04952533,13.3472401 C3.51397752,11.7170237 5.63738499,10.6928545 8,10.6928545 Z"
-          fill="currentColor"
+          fill="#f97316"
         ></path>
         <path
           d="M8,3.5 C6.433,3.5 5.25,4.894 5.25,6.5 C5.25,8.106 6.433,9.5 8,9.5 C9.567,9.5 10.75,8.106 10.75,6.5 C10.75,4.894 9.567,3.5 8,3.5 Z"
-          fill="currentColor"
+          fill="#f97316"
           fillRule="nonzero"
         ></path>
       </g>

@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+
 function withOpacityValue(variable) {
   return ({opacityValue}) => {
     if (opacityValue === undefined) {
@@ -13,14 +14,17 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        /*primary: withOpacityValue('#fafafa'),*/
-        /*contrast: withOpacityValue('#020617'),*/
-        primary: '#020617',
-        primaryOpacity:  withOpacityValue('#020617'),
+        primary: '#111827',
+        primaryOpacity: withOpacityValue('#020617'),
         contrast: withOpacityValue('#fafafa'),
         clear_contrast:'#fafafa',
         notice: withOpacityValue('#c2410c'),
-        shopPay: '#fca5a5'
+        shopPay: '#fca5a5',
+        orange: '#f97316',
+        lightOrange: '#fb923c',
+        gray: '#f3f4f6',
+        lightGray: '#cbd5e1',
+        darkGray: '#1f2937',
       },
       screens: {
         sm: '32em',

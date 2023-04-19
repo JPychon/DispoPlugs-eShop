@@ -4,6 +4,7 @@ import {
   Link,
   AccountLink,
   CartCount,
+  Text,
   WarningBanner,
 } from '~/components';
 import {useParams, Form} from '@remix-run/react';
@@ -17,20 +18,20 @@ export function DesktopHeader({isHome, menu, openCart}) {
         role="banner"
         className={`${
           isHome
-            ? 'bg-primaryOpacity/99 dark:bg-primaryOpacity/60 text-contrast dark:text-primary shadow-darkHeader mt-6'
-            : 'bg-primaryOpacity/99 dark:bg-primaryOpacity/60 text-contrast dark:text-primary shadow-darkHeader mt-6'
+            ? 'bg-primary text-gray shadow-lg'
+            : 'bg-primary text-gray shadow-lg'
         } ${
-          !isHome && y > 50 && ' shadow-lightHeader'
+          !isHome && y > 50 && 'shadow-lightHeader'
         } fixed hidden h-nav lg:flex items-center sticky transition duration-300 z-40 top-0 justify-between w-full leading-none gap-8 px-12 py-8`}
       >
-        <div className="flex gap-12 mt-6">
+        <div className="flex gap-12">
           <Link className="font-bold" to="/" prefetch="intent">
             <img
-                src="https://cdn.shopify.com/s/files/1/0745/8501/4570/files/logo.png?v=1681790728"
-                className='w-full h-52 object-cover -ml-12'
-            />
+                  src="https://cdn.shopify.com/s/files/1/0745/8501/4570/files/small-logo.png?v=1681884207"
+                  className='w-full h-14 object-cover'
+              />
           </Link>
-          <nav className="flex gap-8">
+          <nav className="flex gap-8 mt-8">
             {/* Top level menu items */}
             {(menu?.items || []).map((item) => (
               <Link
@@ -38,11 +39,12 @@ export function DesktopHeader({isHome, menu, openCart}) {
                 to={item.to}
                 target={item.target}
                 prefetch="intent"
-                className={({isActive}) =>
-                  isActive ? 'pb-1 border-b -mb-px' : 'pb-1'
+                className={
+                  ({isActive}) =>
+                  isActive ? 'pb-1 border-b -mb-px border-lightGray font-bold' : 'pb-1 font-semibold'
                 }
               >
-                {item.title}
+                  {item.title}
               </Link>
             ))}
           </nav>
@@ -56,8 +58,8 @@ export function DesktopHeader({isHome, menu, openCart}) {
             <Input
               className={
                 isHome
-                  ? 'focus:border-contrast/20 dark:focus:border-primary/20'
-                  : 'focus:border-primary/20'
+                  ? 'text-lightGray focus:border-gray border-b border-gray'
+                  : 'text-lightGray focus:border-gray border-b border-gray'
               }
               type="search"
               variant="minisearch"

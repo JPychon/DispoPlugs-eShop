@@ -20,6 +20,7 @@ export function Text({
     contrast: 'text-contrast/90',
     light: '#fafafa',
     darkblue: '#020617',
+    orange: 'text-orange'
   };
 
   const sizes = {

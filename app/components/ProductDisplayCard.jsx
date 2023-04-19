@@ -23,17 +23,17 @@ export function ProductDisplayCard({product, label, loading}) {
     <div className="flex flex-col items-center justify-center w-full max-w-sm mx-auto gap-2 sm:mt-9 md:mt-9">
     {image &&
     <Image
-        className="w-full bg-gray-300 bg-center bg-cover rounded-lg shadow-md" 
+        className="w-full bg-gray bg-center bg-cover rounded-lg shadow-md" 
         data={image}
         alt={image.altText || `Picture of ${product.title}`}
         loading={loading}
         />
     }
-    <div className="w-56 -mt-10 overflow-hidden bg-white rounded-lg shadow-lg md:w-64 dark:bg-gray-800">
+    <div className="w-56 -mt-10 overflow-hidden bg-primary rounded-lg shadow-lg md:w-64 dark:bg-gray-800">
         <h3 className="py-2 font-bold tracking-wide text-center text-gray-800 uppercase dark:text-white">
             {product.title}
         </h3>
-        <div className="flex items-center justify-center px-3 py-2 bg-primary">
+        <div className="flex items-center justify-center px-3 py-2 bg-lightGray">
             <span className="font-bold text-gray-800 dark:text-gray-200">
                 <Text className="flex gap-4 text-center">
                     <Money withoutTrailingZeros data={price} />

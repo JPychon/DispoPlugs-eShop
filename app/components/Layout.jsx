@@ -13,10 +13,6 @@ export function Layout({children, layout}) {
             Skip to content
           </a>
         </div>
-        <WarningBanner 
-          title="WARNING:"
-          description="These products contain nicotine - Nicotine is an addictive chemical."
-        />
         <Header
           title={layout?.shop.name ?? 'DisposablesPlug'}
           menu={layout?.headerMenu}

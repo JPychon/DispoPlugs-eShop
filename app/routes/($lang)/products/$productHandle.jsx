@@ -114,9 +114,9 @@ export default function Product() {
   return (
     <>
       <Section padding="all" display='grid'>
-        <div className="grid sm:gap-6 md:gap-6 lg:gap-20 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-3">
+        <div className="grid sm:gap-6 md:gap-6 lg:gap-20 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-3 items-start">
           {/*<ProductCard product={product} onClick={currentSearchParams} className="w-full"/>*/}
-          <ProductDisplayCard product={product}/>    
+          <ProductDisplayCard product={product} className=""/>    
           {/*<div className="sticky md:-mb-nav md:top-nav md:-translate-y-nav md:h-screen md:pt-nav hiddenScroll md:overflow-y-scroll">*/}
           <section className="flex flex-col w-full max-w-xl gap-y-8 py-6 md:mx-auto md:max-w-sm md:px-0 col-span-1">
             <div className="grid gap-4 py-4">

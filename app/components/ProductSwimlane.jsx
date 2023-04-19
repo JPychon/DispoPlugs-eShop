@@ -15,7 +15,7 @@ export function ProductSwimlane({
           <ProductCard
             product={product}
             key={product.id}
-            className="snap-start w-80"
+            className="snap-start w-100"
           />
         ))}
       </Grid>
