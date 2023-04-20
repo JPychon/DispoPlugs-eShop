@@ -15,7 +15,7 @@ import {getImageLoadingPriority} from '~/lib/const';
 import {seoPayload} from '~/lib/seo.server';
 import {routeHeaders, CACHE_SHORT} from '~/data/cache';
 
-const PAGE_BY = 8;
+const PAGE_BY = 24;
 
 export const headers = routeHeaders;
 

@@ -10,7 +10,7 @@ function withOpacityValue(variable) {
 }
 
 module.exports = {
-  content: ['./app/**/*.{js,ts,jsx,tsx}'],
+  content: ['./app/**/*.{js,ts,jsx,tsx}', 'node_modules/flowbite-react/**/*.{js,jsx,ts,tsx}'],
   theme: {
     extend: {
       colors: {
@@ -25,6 +25,8 @@ module.exports = {
         gray: '#f3f4f6',
         lightGray: '#cbd5e1',
         darkGray: '#1f2937',
+        white: '#1f2937',
+        clearWhite: '#F9FAFB'
       },
       screens: {
         sm: '32em',
@@ -74,5 +76,5 @@ module.exports = {
       },
     },
   },
-  plugins: [require('@tailwindcss/forms'), require('@tailwindcss/typography')],
+  plugins: [require('@tailwindcss/forms'), require('@tailwindcss/typography'), require('flowbite/plugin')],
 };

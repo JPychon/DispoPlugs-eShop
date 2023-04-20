@@ -30,7 +30,7 @@ export function ProductDisplayCard({product, label, loading}) {
         />
     }
     <div className="w-56 -mt-10 overflow-hidden bg-primary rounded-lg shadow-lg md:w-64 dark:bg-gray-800">
-        <h3 className="py-2 font-bold tracking-wide text-center text-gray-800 uppercase dark:text-white">
+        <h3 className="py-2 font-bold tracking-wide text-center text-clearWhite uppercase">
             {product.title}
         </h3>
         <div className="flex items-center justify-center px-3 py-2 bg-lightGray">

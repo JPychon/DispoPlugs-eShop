@@ -1,7 +1,7 @@
 import {defer} from '@shopify/remix-oxygen';
 import {Suspense} from 'react';
 import {Await, useLoaderData} from '@remix-run/react';
-import {ProductSwimlane, FeaturedCollections, Hero, CollectionSlider, ProductGallery} from '~/components';
+import {ProductSwimlane, FeaturedCollections, Hero, SlideShow, ProductGallery} from '~/components';
 import {MEDIA_FRAGMENT, PRODUCT_CARD_FRAGMENT} from '~/data/fragments';
 import {getHeroPlaceholder} from '~/lib/placeholders';
 import {seoPayload} from '~/lib/seo.server';
@@ -33,7 +33,6 @@ export async function loader({params, context}) {
   return defer(
     {
       shop,
-      files: context.storefront.query(HOMEPAGE_LOGO_QUERY),
       primaryHero: hero,
       featuredProducts: context.storefront.query(
         HOMEPAGE_FEATURED_PRODUCTS_QUERY,
@@ -100,24 +99,24 @@ export default function Homepage() {
   return (
     <>
 
-      {primaryHero && (
+      {/*primaryHero && (
         <Hero {...primaryHero} height="full" top loading="eager" />
-      )}
+      )*/}
 
-      {/*featuredCollections && (
+      {featuredCollections && (
         <Suspense>
           <Await resolve={featuredCollections}>
             {({collections}) => {
               if (!collections?.nodes) return <></>;
               return (
-                <CollectionSlider
+                <SlideShow
                   collections={collections.nodes}
                 />
               );
             }}
           </Await>
         </Suspense>
-      )*/}
+      )}
 
       {featuredProducts && (
         <Suspense>
@@ -204,24 +203,6 @@ const COLLECTION_CONTENT_FRAGMENT = `#graphql
       }
     }
   }
-`;
-
-const HOMEPAGE_LOGO_QUERY = `#graphql
-query {
-  files(first: 2) {
-    nodes {
-      ... on MediaImage {
-        id
-        image {
-          originalSrc: url
-          width
-          height
-          id
-        }
-      }
-    }
-  }
-}
 `;
 
 
