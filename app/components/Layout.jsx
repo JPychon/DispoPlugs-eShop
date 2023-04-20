@@ -9,6 +9,7 @@ export function Layout({children, layout}) {
     <>
       <div className="flex flex-col min-h-screen">
         <div className="">
+          <WarningBanner title="WARNING:" description="These products contain nicotine - Nicotine is an addictive chemical."/>
           <a href="#mainContent" className="sr-only">
             Skip to content
           </a>

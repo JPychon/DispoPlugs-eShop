@@ -2452,6 +2452,9 @@ input:checked + .toggle-bg{
 .mt-8{
   margin-top: 2rem;
 }
+.mb-0{
+  margin-bottom: 0px;
+}
 .block{
   display: block;
 }
@@ -3541,6 +3544,10 @@ input:checked + .toggle-bg{
   --tw-bg-opacity: 1;
   background-color: rgba(113, 113, 122, var(--tw-bg-opacity));
 }
+.bg-clearWhite{
+  --tw-bg-opacity: 1;
+  background-color: rgba(249, 250, 251, var(--tw-bg-opacity));
+}
 .bg-opacity-25{
   --tw-bg-opacity: 0.25;
 }
@@ -3992,6 +3999,9 @@ input:checked + .toggle-bg{
 .pt-8{
   padding-top: 2rem;
 }
+.pb-0{
+  padding-bottom: 0px;
+}
 .text-left{
   text-align: left;
 }
@@ -4126,6 +4136,10 @@ input:checked + .toggle-bg{
 .text-blue-900{
   --tw-text-opacity: 1;
   color: rgba(35, 56, 118, var(--tw-text-opacity));
+}
+.text-clearWhite{
+  --tw-text-opacity: 1;
+  color: rgba(249, 250, 251, var(--tw-text-opacity));
 }
 .text-contrast{
   --tw-text-opacity: 1;
@@ -4327,10 +4341,6 @@ input:checked + .toggle-bg{
 .text-yellow-900{
   --tw-text-opacity: 1;
   color: rgba(99, 49, 18, var(--tw-text-opacity));
-}
-.text-clearWhite{
-  --tw-text-opacity: 1;
-  color: rgba(249, 250, 251, var(--tw-text-opacity));
 }
 .underline{
   text-decoration-line: underline;
@@ -6201,6 +6211,11 @@ shop-pay-button {
     font-size: 0.75rem;
     line-height: 1rem;
   }
+
+  .sm\:text-sm{
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
 }
 @media (min-width: 48em){
 
@@ -6599,6 +6614,11 @@ shop-pay-button {
     line-height: 1.25rem;
   }
 
+  .md\:text-xs{
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+
   .md\:font-medium{
     font-weight: 500;
   }
@@ -6784,6 +6804,10 @@ shop-pay-button {
     font-size: 1.125rem;
     line-height: 1.75rem;
   }
+
+  .lg\:font-bold{
+    font-weight: 700;
+  }
 }
 @media (min-width: 80em){
 
@@ -6803,6 +6827,10 @@ shop-pay-button {
   .xl\:text-xl{
     font-size: 1.25rem;
     line-height: 1.75rem;
+  }
+
+  .xl\:font-bold{
+    font-weight: 700;
   }
 }
 @media (min-width: 96em){
