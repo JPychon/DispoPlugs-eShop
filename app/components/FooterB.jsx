@@ -16,7 +16,7 @@ export function FooterB() {
                                 <a href="http://disposablesplug.com/pages/about-us" className="hover:underline">About Us</a>
                             </li>
                             <li>
-                                <a href="#" className="hover:underline">PACT Act</a>
+                                <a href="http://disposablesplug.com/pages/pact-act" className="hover:underline">PACT Act</a>
                             </li>
                         </ul>
                     </div>
@@ -27,7 +27,7 @@ export function FooterB() {
                                 <a href="http://disposablesplug.com/pages/frequently-asked-questions" className="hover:underline">FAQ</a>
                             </li>
                             <li>
-                                <a href="http://disposablesplug.com/pages/frequently-asked-questions" className="hover:underline">Return Policy</a>
+                                <a href="http://disposablesplug.com/pages/return-policy" className="hover:underline">Return Policy</a>
                             </li>
                         </ul>
                     </div>
@@ -35,10 +35,10 @@ export function FooterB() {
                         <h2 className="mb-6 text-sm font-semibold text-clearWhite uppercase">Legal</h2>
                         <ul className="text-lightGray font-medium">
                             <li className="mb-4">
-                                <a href="http://disposablesplug.com/pages/frequently-asked-questions" className="hover:underline">Privacy Policy</a>
+                                <a href="http://disposablesplug.com/pages/privacy-policy" className="hover:underline">Privacy Policy</a>
                             </li>
                             <li>
-                                <a href="http://disposablesplug.com/pages/frequently-asked-questions" className="hover:underline">Terms &amp; Conditions</a>
+                                <a href="http://disposablesplug.com/pages/terms-of-service" className="hover:underline">Terms &amp; Conditions</a>
                             </li>
                         </ul>
                     </div>
