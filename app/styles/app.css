@@ -2374,6 +2374,9 @@ input:checked + .toggle-bg{
   margin-top: calc(3rem * -1);
   margin-top: calc(var(--height-nav) * -1);
 }
+.mb-0{
+  margin-bottom: 0px;
+}
 .mb-1{
   margin-bottom: 0.25rem;
 }
@@ -2451,9 +2454,6 @@ input:checked + .toggle-bg{
 }
 .mt-8{
   margin-top: 2rem;
-}
-.mb-0{
-  margin-bottom: 0px;
 }
 .block{
   display: block;
@@ -2589,6 +2589,12 @@ input:checked + .toggle-bg{
 .h-screen-no-nav{
   height: calc(100vh - 3rem);
   height: calc(var(--screen-height, 100vh) - var(--height-nav));
+}
+.h-16{
+  height: 4rem;
+}
+.h-12{
+  height: 3rem;
 }
 .max-h-0{
   max-height: 0px;
@@ -3544,10 +3550,6 @@ input:checked + .toggle-bg{
   --tw-bg-opacity: 1;
   background-color: rgba(113, 113, 122, var(--tw-bg-opacity));
 }
-.bg-clearWhite{
-  --tw-bg-opacity: 1;
-  background-color: rgba(249, 250, 251, var(--tw-bg-opacity));
-}
 .bg-opacity-25{
   --tw-bg-opacity: 0.25;
 }
@@ -3915,6 +3917,9 @@ input:checked + .toggle-bg{
   padding-top: 2rem;
   padding-bottom: 2rem;
 }
+.pb-0{
+  padding-bottom: 0px;
+}
 .pb-1{
   padding-bottom: 0.25rem;
 }
@@ -3998,9 +4003,6 @@ input:checked + .toggle-bg{
 }
 .pt-8{
   padding-top: 2rem;
-}
-.pb-0{
-  padding-bottom: 0px;
 }
 .text-left{
   text-align: left;
@@ -4665,20 +4667,6 @@ shop-pay-button {
   width: 100%;
   height: 3rem;
   display: table;
-}
-@media (min-width: 32em){
-
-  .sm\:invisible.tooltip > .tooltip-arrow:before{
-    visibility: hidden;
-  }
-
-  .sm\:invisible[role="tooltip"] > [data-popper-arrow]:before{
-    visibility: hidden;
-  }
-
-  .sm\:invisible[role="tooltip"] > [data-popper-arrow]:after{
-    visibility: hidden;
-  }
 }
 .dark .dark\:prose-invert{
   --tw-prose-body: var(--tw-prose-invert-body);
@@ -5991,10 +5979,6 @@ shop-pay-button {
 }
 @media (min-width: 32em){
 
-  .sm\:invisible{
-    visibility: hidden;
-  }
-
   .sm\:bottom-auto{
     bottom: auto;
   }
@@ -6211,17 +6195,8 @@ shop-pay-button {
     font-size: 0.75rem;
     line-height: 1rem;
   }
-
-  .sm\:text-sm{
-    font-size: 0.875rem;
-    line-height: 1.25rem;
-  }
 }
 @media (min-width: 48em){
-
-  .md\:visible{
-    visibility: visible;
-  }
 
   .md\:sticky{
     position: sticky;
@@ -6651,10 +6626,6 @@ shop-pay-button {
   }
 }
 @media (min-width: 64em){
-
-  .lg\:visible{
-    visibility: visible;
-  }
 
   .lg\:my-8{
     margin-top: 2rem;
