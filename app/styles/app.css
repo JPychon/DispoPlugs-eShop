@@ -2590,12 +2590,6 @@ input:checked + .toggle-bg{
   height: calc(100vh - 3rem);
   height: calc(var(--screen-height, 100vh) - var(--height-nav));
 }
-.h-16{
-  height: 4rem;
-}
-.h-12{
-  height: 3rem;
-}
 .max-h-0{
   max-height: 0px;
 }
