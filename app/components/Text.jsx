@@ -143,7 +143,7 @@ export function PageHeader({
   ...props
 }) {
   const variants = {
-    default: 'grid w-full gap-8 p-6 py-8 md:p-8 lg:p-12 justify-items-start',
+    default: 'grid w-full gap-8 p-6 py-8 md:p-8 lg:p-12 justify-items-center',
     blogPost:
       'grid md:text-center w-full gap-4 p-6 py-8 md:p-8 lg:p-12 md:justify-items-center',
     allCollections:
@@ -155,7 +155,7 @@ export function PageHeader({
   return (
     <header {...props} className={styles}>
       {heading && (
-        <Heading as="h1" width="narrow" size="heading" className="inline-block">
+        <Heading as="h1" width="narrow" size="heading" className="inline-block text-center">
           {heading}
         </Heading>
       )}

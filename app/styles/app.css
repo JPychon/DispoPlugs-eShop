@@ -2886,6 +2886,9 @@ input:checked + .toggle-bg{
 .flex-wrap{
   flex-wrap: wrap;
 }
+.content-center{
+  align-content: center;
+}
 .content-start{
   align-content: flex-start;
 }
