@@ -9,13 +9,17 @@ export function SlideShow({collections}) {
         <Carousel slideInterval={5000}>
           {collections.map((collection) => ( // map through the collections array
             <Link key={collection.id} to={`/collections/${collection.handle}`} className="overscroll-x-hidden">
-                  <Image
+                  {/*<Image
                     alt={`Image of ${collection.title}`}
                     data={collection.image}
                     loaderOptio5ns={{
                       scale: 2,
                       crop: 'center',
                     }}
+                  />*/}
+                  <img
+                    src={collection.image.url}
+                    alt={`Image of ${collection.title}`}
                   />
             </Link>
           ))}
