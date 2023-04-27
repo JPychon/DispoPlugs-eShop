@@ -29,6 +29,7 @@ module.exports = {
         clearWhite: '#F9FAFB'
       },
       screens: {
+        xs: '24em',
         sm: '32em',
         md: '48em',
         lg: '64em',

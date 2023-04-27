@@ -44,7 +44,7 @@ export function MobileHeader({title, isHome, openCart, openMenu}) {
             <Input
               className={
                 isHome
-                  ? 'text-lightGray focus:border-contrast/20'
+                ? 'text-lightGray focus:border-contrast/20'
                   : 'text-lightGray focus:border-primary/20'
               }
               type="search"
@@ -64,7 +64,7 @@ export function MobileHeader({title, isHome, openCart, openMenu}) {
           </Heading>*/}
           <img
                 src="https://cdn.shopify.com/s/files/1/0745/8501/4570/files/small-logo.png?v=1681884207"
-                className='w-full h-8 object-cover'
+                className='w-fit h-fit object-cover'
             />
         </Link>
   

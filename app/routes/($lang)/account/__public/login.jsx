@@ -82,7 +82,8 @@ export default function Login() {
   return (
     <div className="flex justify-center my-24 px-4">
       <div className="max-w-md w-full">
-        <h1 className="text-4xl">Sign in.</h1>
+        <h1 className="text-4xl text-center">Customer Login</h1>
+        <p className="text-center mt-4">Insert your email & password.</p>
         {/* TODO: Add onSubmit to validate _before_ submission with native? */}
         <Form
           method="post"
@@ -157,7 +158,7 @@ export default function Login() {
           </div>
           <div className="flex items-center justify-between">
             <button
-              className="bg-primary text-lightGray rounded py-2 px-4 focus:shadow-outline block w-full"
+              className="bg-primary text-slate-50 rounded py-2 px-4 focus:shadow-outline block w-full"
               type="submit"
               disabled={!!(nativePasswordError || nativeEmailError)}
             >
@@ -166,7 +167,7 @@ export default function Login() {
           </div>
           <div className="flex justify-between items-center mt-8 border-t border-gray-300">
             <p className="align-baseline text-sm mt-6">
-              New to {shopName}? &nbsp;
+              New user? &nbsp;
               <Link className="inline underline" to="/account/register">
                 Create an account
               </Link>

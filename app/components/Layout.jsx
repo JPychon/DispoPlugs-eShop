@@ -1,7 +1,7 @@
 import {
-  WarningBanner,
   Header,
   FooterB,
+  AgeVerification,
 } from '~/components';
 
 export function Layout({children, layout}) {
@@ -9,7 +9,6 @@ export function Layout({children, layout}) {
     <>
       <div className="flex flex-col min-h-screen">
         <div className="">
-          <WarningBanner title="WARNING:" description="These products contain nicotine - Nicotine is an addictive chemical."/>
           <a href="#mainContent" className="sr-only">
             Skip to content
           </a>
@@ -18,6 +17,7 @@ export function Layout({children, layout}) {
           title={layout?.shop.name ?? 'DisposablesPlug'}
           menu={layout?.headerMenu}
         />
+        <AgeVerification/>
         <main role="main" id="mainContent" className="flex-grow">
           {children}
         </main>

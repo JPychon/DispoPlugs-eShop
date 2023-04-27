@@ -37,4 +37,5 @@ export {WarningBanner} from './WarningBanner';
 export {ProductDisplayCard} from './ProductDisplayCard';
 export {Header} from './Header';
 export {SlideShow} from './SlideShow';
+export {AgeVerification} from './AgeVerification';
 export * from './Icon';
