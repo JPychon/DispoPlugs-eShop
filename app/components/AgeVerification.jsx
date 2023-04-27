@@ -17,7 +17,7 @@ export function AgeVerification() {
       return(
     <Modal
     show={displayPopUp}
-    size="lg lg:xl"
+    size="lg"
     popup={true}
     position="center"
     >
