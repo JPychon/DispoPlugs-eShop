@@ -1,3 +1,5 @@
+import {AuthorizeNetSeal} from '~/components';
+
 export function FooterB() {
     return(
     <footer className="grid bg-primary dark:bg-primary text-gray-700 items-start grid-flow-row w-full inset-x-0 bottom-0">
@@ -8,6 +10,7 @@ export function FooterB() {
                         <img src="https://cdn.shopify.com/s/files/1/0745/8501/4570/files/logo.png?v=1681790728" className="lg:h-48 md:h-28 sm:mr-3" alt="Disposables Plug Logo" />
                     </a>
                 </div>
+                <AuthorizeNetSeal/>
                 <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3 lg:mt-10 mb-2">
                     <div>
                         <h2 className="mb-6 text-sm font-semibold text-clearWhite uppercase">Resources</h2>
