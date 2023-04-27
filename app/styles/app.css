@@ -2596,6 +2596,9 @@ input:checked + .toggle-bg{
   height: calc(100vh - 3rem);
   height: calc(var(--screen-height, 100vh) - var(--height-nav));
 }
+.h-16{
+  height: 4rem;
+}
 .max-h-0{
   max-height: 0px;
 }
@@ -2692,6 +2695,9 @@ input:checked + .toggle-bg{
 }
 .w-screen{
   width: 100vw;
+}
+.w-14{
+  width: 3.5rem;
 }
 .min-w-0{
   min-width: 0px;
@@ -3823,6 +3829,10 @@ input:checked + .toggle-bg{
 }
 .fill-yellow-400{
   fill: #E3A008;
+}
+.object-contain{
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 .object-cover{
   -o-object-fit: cover;
