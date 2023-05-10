@@ -33,9 +33,9 @@ function root({shop, url}) {
 
 function home() {
   return {
-    title: 'Home',
-    titleTemplate: '%s | DisposablesPlug',
-    description: 'Your reliable plug for disposables.',
+    title: 'Disposable Vapes Online Store',
+    titleTemplate: 'DisposablesPlug | %s',
+    description: 'The ultimate destination for disposable vapes. Our collection of high-quality products offers a wide range of flavors and nicotine strengths to suit your preferences with fast and reliable shipping!',
     robots: {
       noIndex: false,
       noFollow: false,
