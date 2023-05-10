@@ -4,8 +4,6 @@ import {
   Link,
   AccountLink,
   CartCount,
-  Text,
-  WarningBanner,
 } from '~/components';
 import {useParams, Form} from '@remix-run/react';
 import {useWindowScroll} from 'react-use';

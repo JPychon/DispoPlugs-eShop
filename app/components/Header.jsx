@@ -4,7 +4,7 @@ import {
     DesktopHeader,
     CartDrawer,
     MenuDrawer,
-    WarningBanner,
+    HeaderBanner,
   } from '~/components';
   import {useEffect} from 'react';
   import {useIsHomePath} from '~/lib/utils';
@@ -40,9 +40,9 @@ export function Header({title, menu, logo}) {
           <MenuDrawer isOpen={isMenuOpen} onClose={closeMenu} menu={menu} />
         )}
       {isHome ? (
-        <WarningBanner
+        <HeaderBanner
           title="WARNING:"
-          description="These products contain nicotine - Nicotine is an addictive chemical."
+          description="These products contain Nicotine - Nicotine is an addictive chemical."
         />
       ) : null}
         <DesktopHeader

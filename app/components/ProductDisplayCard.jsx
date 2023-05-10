@@ -1,7 +1,7 @@
 import {flattenConnection, Image, Money} from '@shopify/hydrogen';
 import {isDiscounted, isNewArrival} from '~/lib/utils';
 import {getProductPlaceholder} from '~/lib/placeholders';
-import {Text, Heading} from '~/components';
+import {Text} from '~/components';
 
 export function ProductDisplayCard({product, label, loading}) {
 

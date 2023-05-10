@@ -33,7 +33,7 @@ export {FooterB} from './FooterB';
 export {MenuMobileNav} from './MenuMobileNav';
 export {CartDrawer} from './CartDrawer';
 export {MenuDrawer} from './MenuDrawer';
-export {WarningBanner} from './WarningBanner';
+export {HeaderBanner} from './HeaderBanner';
 export {ProductDisplayCard} from './ProductDisplayCard';
 export {Header} from './Header';
 export {SlideShow} from './SlideShow';
