@@ -13,7 +13,7 @@ export function FooterB() {
                         </div>
                     </a>
                 </div>
-                <div className="grid grid-cols-2 gap-2 sm:gap-6 sm:grid-cols-2 lg:mt-10 mb-2 lg:grid-cols-5 lg:justify-items-end lg:ml-16">
+                <div className="grid grid-cols-2 gap-2 sm:gap-6 sm:grid-cols-2 lg:mt-10 mb-2 lg:grid-cols-5 lg:justify-items-end lg:ml-24">
                     <div>
                         <h2 className="mb-6 text-sm text-clearWhite font-semibold uppercase">CONTACT</h2>
                         <ul className="text-lightGray text-xs">
@@ -58,7 +58,7 @@ export function FooterB() {
                             </li>
                         </ul>
                     </div>
-                    <div className='lg:flex lg:h-24'>
+                    <div className='flex h-28 mt-2 lg:h-24 col-span-2 lg:col-span-1 justify-center content-center'>
                     <img src="https://cdn.shopify.com/s/files/1/0745/8501/4570/files/seal1.png?v=1682631773" className="object-cover" alt="Authorize.NET Verified Merchant" />
                     <AuthorizeNetSeal/>
                     </div>

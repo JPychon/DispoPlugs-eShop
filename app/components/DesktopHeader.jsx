@@ -23,10 +23,10 @@ export function DesktopHeader({isHome, menu, openCart}) {
       } fixed hidden h-nav lg:flex items-center sticky transition duration-300 z-40 top-0 justify-between w-full leading-none gap-8 px-12 py-2`}
     >
       <div className="flex gap-12">
-        <Link className="font-bold" to="/" prefetch="intent">
+        <Link className="font-bold w-fit" to="/" prefetch="intent">
           <img
                 src="https://cdn.shopify.com/s/files/1/0745/8501/4570/files/small-logo.png?v=1681884207"
-                className='w-fit h-14 md:h-12 sm:h-10 object-cover mt-2'
+                className='w-100 h-14 md:h-12 sm:h-10 object-cover mt-2'
             />
         </Link>
         <nav className="flex gap-8 mt-8">

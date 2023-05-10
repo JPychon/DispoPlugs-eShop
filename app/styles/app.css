@@ -2308,6 +2308,9 @@ input:checked + .toggle-bg{
 .col-span-1{
   grid-column: span 1 / span 1;
 }
+.col-span-2{
+  grid-column: span 2 / span 2;
+}
 .-m-4{
   margin: -1rem;
 }
@@ -2450,18 +2453,6 @@ input:checked + .toggle-bg{
 .mt-8{
   margin-top: 2rem;
 }
-.line-clamp-3{
-  overflow: hidden;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 3;
-}
-.line-clamp-2{
-  overflow: hidden;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;
-}
 .block{
   display: block;
 }
@@ -2527,6 +2518,9 @@ input:checked + .toggle-bg{
 }
 .h-24{
   height: 6rem;
+}
+.h-28{
+  height: 7rem;
 }
 .h-3{
   height: 0.75rem;
@@ -2929,9 +2923,6 @@ input:checked + .toggle-bg{
 .justify-items-start{
   justify-items: start;
 }
-.justify-items-end{
-  justify-items: end;
-}
 .justify-items-center{
   justify-items: center;
 }
@@ -3201,6 +3192,10 @@ input:checked + .toggle-bg{
 .border-none{
   border-style: none;
 }
+.border-\[\#9a3412\]{
+  --tw-border-opacity: 1;
+  border-color: rgba(154, 52, 18, var(--tw-border-opacity));
+}
 .border-black{
   --tw-border-opacity: 1;
   border-color: rgba(0, 0, 0, var(--tw-border-opacity));
@@ -3279,6 +3274,10 @@ input:checked + .toggle-bg{
 .border-lime-500{
   --tw-border-opacity: 1;
   border-color: rgba(132, 204, 22, var(--tw-border-opacity));
+}
+.border-notice{
+  --tw-border-opacity: 1;
+  border-color: rgb(var(#c2410c) / var(--tw-border-opacity));
 }
 .border-orange{
   --tw-border-opacity: 1;
@@ -3366,16 +3365,12 @@ input:checked + .toggle-bg{
   --tw-border-opacity: 1;
   border-color: rgba(159, 88, 10, var(--tw-border-opacity));
 }
-.border-notice{
-  --tw-border-opacity: 1;
-  border-color: rgb(var(#c2410c) / var(--tw-border-opacity));
-}
-.border-\[\#9a3412\]{
-  --tw-border-opacity: 1;
-  border-color: rgba(154, 52, 18, var(--tw-border-opacity));
-}
 .\!bg-transparent{
   background-color: transparent !important;
+}
+.bg-\[\#e1effe\]{
+  --tw-bg-opacity: 1;
+  background-color: rgba(225, 239, 254, var(--tw-bg-opacity));
 }
 .bg-black{
   --tw-bg-opacity: 1;
@@ -3576,70 +3571,6 @@ input:checked + .toggle-bg{
 .bg-zinc-500{
   --tw-bg-opacity: 1;
   background-color: rgba(113, 113, 122, var(--tw-bg-opacity));
-}
-.bg-\[\#cbd5e1\]{
-  --tw-bg-opacity: 1;
-  background-color: rgba(203, 213, 225, var(--tw-bg-opacity));
-}
-.bg-\[\#e2e8f0\]{
-  --tw-bg-opacity: 1;
-  background-color: rgba(226, 232, 240, var(--tw-bg-opacity));
-}
-.bg-\[\#f1f5f9\]{
-  --tw-bg-opacity: 1;
-  background-color: rgba(241, 245, 249, var(--tw-bg-opacity));
-}
-.bg-\[\#d1d5db\]{
-  --tw-bg-opacity: 1;
-  background-color: rgba(209, 213, 219, var(--tw-bg-opacity));
-}
-.bg-\[\#e5e7eb\]{
-  --tw-bg-opacity: 1;
-  background-color: rgba(229, 231, 235, var(--tw-bg-opacity));
-}
-.bg-\[\#f3f4f6\]{
-  --tw-bg-opacity: 1;
-  background-color: rgba(243, 244, 246, var(--tw-bg-opacity));
-}
-.bg-\[\#c7d2fe\]{
-  --tw-bg-opacity: 1;
-  background-color: rgba(199, 210, 254, var(--tw-bg-opacity));
-}
-.bg-\[\#eef2ff\]{
-  --tw-bg-opacity: 1;
-  background-color: rgba(238, 242, 255, var(--tw-bg-opacity));
-}
-.bg-\[\#dbeafe\]{
-  --tw-bg-opacity: 1;
-  background-color: rgba(219, 234, 254, var(--tw-bg-opacity));
-}
-.bg-\[\#eff6ff\]{
-  --tw-bg-opacity: 1;
-  background-color: rgba(239, 246, 255, var(--tw-bg-opacity));
-}
-.bg-\[\#f0f9ff\]{
-  --tw-bg-opacity: 1;
-  background-color: rgba(240, 249, 255, var(--tw-bg-opacity));
-}
-.bg-\[\#e0f2fe\]{
-  --tw-bg-opacity: 1;
-  background-color: rgba(224, 242, 254, var(--tw-bg-opacity));
-}
-.bg-\[\#bae6fd\]{
-  --tw-bg-opacity: 1;
-  background-color: rgba(186, 230, 253, var(--tw-bg-opacity));
-}
-.bg-\[\#bfdbfe\]{
-  --tw-bg-opacity: 1;
-  background-color: rgba(191, 219, 254, var(--tw-bg-opacity));
-}
-.bg-\[\#16191b\]{
-  --tw-bg-opacity: 1;
-  background-color: rgba(22, 25, 27, var(--tw-bg-opacity));
-}
-.bg-\[\#e1effe\]{
-  --tw-bg-opacity: 1;
-  background-color: rgba(225, 239, 254, var(--tw-bg-opacity));
 }
 .bg-opacity-25{
   --tw-bg-opacity: 0.25;
@@ -6665,6 +6596,10 @@ shop-pay-button {
 }
 @media (min-width: 64em){
 
+  .lg\:col-span-1{
+    grid-column: span 1 / span 1;
+  }
+
   .lg\:my-8{
     margin-top: 2rem;
     margin-bottom: 2rem;
@@ -6674,32 +6609,12 @@ shop-pay-button {
     margin-bottom: 1rem;
   }
 
+  .lg\:ml-24{
+    margin-left: 6rem;
+  }
+
   .lg\:mt-10{
     margin-top: 2.5rem;
-  }
-
-  .lg\:ml-4{
-    margin-left: 1rem;
-  }
-
-  .lg\:ml-8{
-    margin-left: 2rem;
-  }
-
-  .lg\:ml-12{
-    margin-left: 3rem;
-  }
-
-  .lg\:ml-14{
-    margin-left: 3.5rem;
-  }
-
-  .lg\:ml-16{
-    margin-left: 4rem;
-  }
-
-  .lg\:ml-20{
-    margin-left: 5rem;
   }
 
   .lg\:flex{
@@ -6734,14 +6649,6 @@ shop-pay-button {
     grid-template-columns: repeat(5, minmax(0, 1fr));
   }
 
-  .lg\:content-center{
-    align-content: center;
-  }
-
-  .lg\:justify-center{
-    justify-content: center;
-  }
-
   .lg\:justify-items-end{
     justify-items: end;
   }
@@ -6756,14 +6663,6 @@ shop-pay-button {
 
   .lg\:gap-6{
     gap: 1.5rem;
-  }
-
-  .lg\:gap-2{
-    gap: 0.5rem;
-  }
-
-  .lg\:gap-4{
-    gap: 1rem;
   }
 
   .lg\:p-12{

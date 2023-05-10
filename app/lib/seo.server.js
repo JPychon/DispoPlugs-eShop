@@ -208,7 +208,7 @@ function listCollections({collections, url}) {
   return {
     title: 'Collections',
     titleTemplate: '%s | Collections',
-    description: 'All Disposables Plug collections',
+    description: 'All DisposablesPlug collections',
     url,
     jsonLd: collectionsJsonLd({collections, url}),
   };
@@ -295,7 +295,7 @@ function policies({policies, url}) {
   return {
     title: 'Policies',
     titleTemplate: '%s | Policies',
-    description: 'Disposables Plug policies',
+    description: 'DisposablesPlug Policies',
     jsonLd: [
       {
         '@context': 'https://schema.org',
@@ -305,7 +305,7 @@ function policies({policies, url}) {
       {
         '@context': 'https://schema.org',
         '@type': 'WebPage',
-        description: 'Disposables Plug policies',
+        description: 'DisposablesPlug Policies',
         name: 'Policies',
         url,
       },
