@@ -14,7 +14,7 @@ import {Layout} from '~/components';
 import {GenericError} from './components/GenericError';
 import {NotFound} from './components/NotFound';
 import styles from './styles/app.css';
-import favicon from '../public/favicon.png';
+import favicon from '../public/favicon.ico';
 import {seoPayload} from '~/lib/seo.server';
 import {DEFAULT_LOCALE, parseMenu} from './lib/utils';
 import invariant from 'tiny-invariant';
@@ -31,7 +31,7 @@ export const links = () => {
       rel: 'preconnect',
       href: 'https://shop.app',
     },
-    {rel: 'icon', type: 'image/png', href: favicon},
+    {rel: 'icon', type: 'image/x-icon', href: favicon},
   ];
 };
 
