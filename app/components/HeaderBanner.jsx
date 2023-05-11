@@ -10,17 +10,17 @@ export function HeaderBanner({title, description}) {
               </Text>
           </div>
           <div className='flex justify-center text-center bg-[#e1effe] border-notice border-y-2 border-[#9a3412]'>
-          <Alert
-            withBorderAccent={false}
-            rounded={false}
-            className='text-white text-center'
-            >
-            <span>
-            <span className="font-black">
-                DEAL:
-            </span>
-            {' '}Buy four disposables & receive the 4th free! 
-            </span>
+            <Alert
+                withBorderAccent={false}
+                rounded={false}
+                className='text-white text-center'
+                >
+                <span>
+                    <span className="font-black">
+                        DEAL:
+                    </span>
+                {' '}Buy four disposables & receive the 4th free! 
+                </span>
             </Alert>
           </div>
       </div>

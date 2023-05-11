@@ -246,7 +246,7 @@ export function ProductForm({variant}) {
               >
                 <Text
                   as="span"
-                  className="flex items-center justify-center gap-2 text-lightGray font-bold"
+                  className="flex items-center justify-center gap-2 text-clearWhite font-bold"
                 >
                   <span>Add to Cart</span> <span>·</span>{' '}
                   <Money
