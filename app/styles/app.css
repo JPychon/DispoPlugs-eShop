@@ -2453,6 +2453,9 @@ input:checked + .toggle-bg{
 .mt-8{
   margin-top: 2rem;
 }
+.-mt-2{
+  margin-top: -0.5rem;
+}
 .block{
   display: block;
 }
@@ -6617,6 +6620,10 @@ shop-pay-button {
     margin-top: 2.5rem;
   }
 
+  .lg\:mt-0{
+    margin-top: 0px;
+  }
+
   .lg\:flex{
     display: flex;
   }
@@ -6635,6 +6642,10 @@ shop-pay-button {
 
   .lg\:h-36{
     height: 9rem;
+  }
+
+  .lg\:h-20{
+    height: 5rem;
   }
 
   .lg\:grid-cols-3{
