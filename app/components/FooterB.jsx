@@ -74,7 +74,7 @@ export function FooterB() {
             <hr className="mb-6 border-darkGray sm:mx-auto lg:mb-4" />
             <div className="sm:flex sm:items-center sm:justify-between sm:mb-4 md:mb-4">
                 <span className="text-sm text-lightGray sm:text-center">
-                    © 2023 <a href="https://disposablesplug.com/" className="hover:underline">Disposables Plug</a>. 
+                    © 2023 <a href="https://disposablesplug.com/" className="hover:underline">DisposablesPlug</a>. 
                     All Rights Reserved.
                 </span>
                 <div className="flex mt-4 lg:mt-0 space-x-6 sm:justify-center sm:mt-0 mb-4">
