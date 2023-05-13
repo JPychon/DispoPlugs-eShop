@@ -62,8 +62,11 @@ export function FooterB() {
                             <li className="mb-4">
                                 <a href="http://disposablesplug.com/pages/privacy-policy" className="hover:underline">Privacy Policy</a>
                             </li>
-                            <li>
+                            <li className='mb-4'>
                                 <a href="http://disposablesplug.com/pages/terms-of-service" className="hover:underline">Terms of Service</a>
+                            </li>
+                            <li>
+                                <a href="http://disposablesplug.com/pages/fda-disclaimer" className="hover:underline">FDA Disclaimer</a>
                             </li>
                         </ul>
                     </div>
