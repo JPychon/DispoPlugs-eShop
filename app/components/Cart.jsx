@@ -144,7 +144,7 @@ function CartCheckoutActions({checkoutUrl}) {
   return (
     <div className="flex flex-col mt-2">
       <a href={checkoutUrl} target="_self">
-        <Button as="span" width="full">
+        <Button as="span" width="full" className='bg-primary text-secondary hover:bg-primary/9 shadow-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 text-base flex items-center justify-center text-clearWhite bg-gray-800py-4 hover:bg-gray-700 focus:outline-none font-bold py-2'>
           Continue to Checkout
         </Button>
       </a>
