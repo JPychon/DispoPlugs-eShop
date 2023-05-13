@@ -35,7 +35,7 @@ export function FooterB() {
                         <h2 className="mb-6 text-sm font-semibold text-clearWhite uppercase">Resources</h2>
                         <ul className="text-lightGray font-medium">
                             <li className="mb-4">
-                                <a href="http://disposablesplug.com/pages/faq" className="hover:underline">FAQ</a>
+                                <a href="http://disposablesplug.com/pages/about-us" className="hover:underline">About Us</a>
                             </li>
                             <li className='mb-2'>
                                 <a href="http://disposablesplug.com/pages/pact-act" className="hover:underline">PACT Act</a>
@@ -46,10 +46,13 @@ export function FooterB() {
                         <h2 className="mb-6 text-sm font-semibold text-clearWhite uppercase mt-4 lg:mt-0">Support</h2>
                         <ul className="text-lightGray font-medium">
                             <li className="mb-4">
-                                <a href="http://disposablesplug.com/pages/about-us" className="hover:underline">About Us</a>
+                                <a href="http://disposablesplug.com/pages/faq" className="hover:underline">FAQ</a>
+                            </li>
+                            <li className='mb-4'>
+                                <a href="http://disposablesplug.com/pages/return-policy" className="hover:underline">Return Policy</a>
                             </li>
                             <li>
-                                <a href="http://disposablesplug.com/pages/return-policy" className="hover:underline">Return Policy</a>
+                                <a href="http://disposablesplug.com/pages/shipping-policy" className="hover:underline">Shipping Policy</a>
                             </li>
                         </ul>
                     </div>

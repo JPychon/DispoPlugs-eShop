@@ -2453,9 +2453,6 @@ input:checked + .toggle-bg{
 .mt-8{
   margin-top: 2rem;
 }
-.ml-4{
-  margin-left: 1rem;
-}
 .block{
   display: block;
 }
