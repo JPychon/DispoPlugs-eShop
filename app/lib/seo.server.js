@@ -35,7 +35,7 @@ function home() {
   return {
     title: 'Disposable Vapes Online Store',
     titleTemplate: 'DisposablesPlug | %s',
-    description: 'The ultimate destination for disposable vapes. Our collection of high-quality products offers a wide range of flavors and nicotine strengths to suit your preferences with fast and reliable shipping!',
+    description: 'The ultimate destination for disposable vapes. Our collection of high-quality products offers a wide range of flavors to suit your preferences!',
     robots: {
       noIndex: false,
       noFollow: false,
