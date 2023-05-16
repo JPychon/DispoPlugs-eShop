@@ -19,7 +19,7 @@ export function HeaderBanner({title, description}) {
                     <span className="font-black">
                         DEAL:
                     </span>
-                {' '}Buy four disposables & receive the 4th free! 
+                {' '}Buy three disposables & get the 4th FREE! 
                 </span>
             </Alert>
           </div>
