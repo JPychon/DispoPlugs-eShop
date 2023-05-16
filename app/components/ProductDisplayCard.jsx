@@ -1,4 +1,5 @@
-import {flattenConnection, Image, Money} from '@shopify/hydrogen';
+import clsx from 'clsx';
+import {flattenConnection, Image, Money, useMoney} from '@shopify/hydrogen';
 import {isDiscounted, isNewArrival} from '~/lib/utils';
 import {getProductPlaceholder} from '~/lib/placeholders';
 import {Text} from '~/components';
