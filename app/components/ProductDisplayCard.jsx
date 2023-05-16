@@ -4,7 +4,8 @@ import {getProductPlaceholder} from '~/lib/placeholders';
 import {Text} from '~/components';
 
 export function ProductDisplayCard({product, label, loading}) {
-
+    let cardLabel;
+    
     const cardProduct = product?.variants ? product : getProductPlaceholder();
     if (!cardProduct?.variants?.nodes?.length) return null;
   
