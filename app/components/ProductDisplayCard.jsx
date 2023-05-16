@@ -50,3 +50,17 @@ export function ProductDisplayCard({product, label, loading}) {
         </div>
     </div>
 )}
+
+function CompareAtPrice({data, className}) {
+    const {currencyNarrowSymbol, withoutTrailingZerosAndCurrency} =
+      useMoney(data);
+  
+    const styles = clsx('strike', className);
+  
+    return (
+      <span className={styles}>
+        {currencyNarrowSymbol}
+        {withoutTrailingZerosAndCurrency}
+      </span>
+    );
+}
