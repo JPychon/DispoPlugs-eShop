@@ -2486,6 +2486,9 @@ input:checked + .toggle-bg{
 .aspect-\[4\/5\]{
   aspect-ratio: 4/5;
 }
+.aspect-auto{
+  aspect-ratio: auto;
+}
 .aspect-square{
   aspect-ratio: 1 / 1;
 }
@@ -2537,9 +2540,6 @@ input:checked + .toggle-bg{
 .h-5{
   height: 1.25rem;
 }
-.h-52{
-  height: 13rem;
-}
 .h-6{
   height: 1.5rem;
 }
@@ -2588,8 +2588,36 @@ input:checked + .toggle-bg{
   height: calc(100vh - 3rem);
   height: calc(var(--screen-height, 100vh) - var(--height-nav));
 }
+.h-52{
+  height: 13rem;
+}
 .h-64{
   height: 16rem;
+}
+.h-9{
+  height: 2.25rem;
+}
+.h-2\/5{
+  height: 40%;
+}
+.h-3\/5{
+  height: 60%;
+}
+.h-max{
+  height: -moz-max-content;
+  height: max-content;
+}
+.h-1\/2{
+  height: 50%;
+}
+.h-3\/4{
+  height: 75%;
+}
+.h-72{
+  height: 18rem;
+}
+.h-80{
+  height: 20rem;
 }
 .max-h-0{
   max-height: 0px;
@@ -2687,6 +2715,13 @@ input:checked + .toggle-bg{
 }
 .w-screen{
   width: 100vw;
+}
+.w-\[100\]{
+  width: 100;
+}
+.w-max{
+  width: -moz-max-content;
+  width: max-content;
 }
 .min-w-\[0\.75rem\]{
   min-width: 0.75rem;
@@ -2833,6 +2868,9 @@ input:checked + .toggle-bg{
 }
 .cursor-pointer{
   cursor: pointer;
+}
+.resize{
+  resize: both;
 }
 .snap-x{
   scroll-snap-type: x var(--tw-scroll-snap-strictness);
@@ -3572,6 +3610,26 @@ input:checked + .toggle-bg{
   --tw-bg-opacity: 1;
   background-color: rgba(113, 113, 122, var(--tw-bg-opacity));
 }
+.bg-\[\#334155\]{
+  --tw-bg-opacity: 1;
+  background-color: rgba(51, 65, 85, var(--tw-bg-opacity));
+}
+.bg-\[\#e2e8f0\]{
+  --tw-bg-opacity: 1;
+  background-color: rgba(226, 232, 240, var(--tw-bg-opacity));
+}
+.bg-\[\#1c1917\]{
+  --tw-bg-opacity: 1;
+  background-color: rgba(28, 25, 23, var(--tw-bg-opacity));
+}
+.bg-\[\#9a3412\]{
+  --tw-bg-opacity: 1;
+  background-color: rgba(154, 52, 18, var(--tw-bg-opacity));
+}
+.bg-\[\#fdba74\]{
+  --tw-bg-opacity: 1;
+  background-color: rgba(253, 186, 116, var(--tw-bg-opacity));
+}
 .bg-opacity-25{
   --tw-bg-opacity: 0.25;
 }
@@ -3828,6 +3886,10 @@ input:checked + .toggle-bg{
 .object-cover{
   -o-object-fit: cover;
      object-fit: cover;
+}
+.object-fill{
+  -o-object-fit: fill;
+     object-fit: fill;
 }
 .object-center{
   -o-object-position: center;
@@ -4401,6 +4463,9 @@ input:checked + .toggle-bg{
 .opacity-50{
   opacity: 0.5;
 }
+.bg-blend-overlay{
+  background-blend-mode: overlay;
+}
 .shadow{
   --tw-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
   --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
@@ -4486,8 +4551,27 @@ input:checked + .toggle-bg{
   --tw-ring-opacity: 1;
   --tw-ring-color: rgba(250, 202, 21, var(--tw-ring-opacity));
 }
+.blur-md{
+  --tw-blur: blur(12px);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
 .filter{
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+.backdrop-blur{
+  --tw-backdrop-blur: blur(8px);
+  -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+          backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+}
+.backdrop-opacity-80{
+  --tw-backdrop-opacity: opacity(0.8);
+  -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+          backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+}
+.backdrop-opacity-10{
+  --tw-backdrop-opacity: opacity(0.1);
+  -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+          backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
 }
 .transition{
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
@@ -6054,6 +6138,22 @@ shop-pay-button {
     height: 1.75rem;
   }
 
+  .sm\:h-3\/4{
+    height: 75%;
+  }
+
+  .sm\:h-72{
+    height: 18rem;
+  }
+
+  .sm\:h-80{
+    height: 20rem;
+  }
+
+  .sm\:h-96{
+    height: 24rem;
+  }
+
   .sm\:w-10{
     width: 2.5rem;
   }
@@ -6641,6 +6741,15 @@ shop-pay-button {
     height: 9rem;
   }
 
+  .lg\:h-screen{
+    height: 100vh;
+    height: var(--screen-height, 100vh);
+  }
+
+  .lg\:h-\[90vh\]{
+    height: 90vh;
+  }
+
   .lg\:grid-cols-3{
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
@@ -6667,6 +6776,10 @@ shop-pay-button {
 
   .lg\:gap-6{
     gap: 1.5rem;
+  }
+
+  .lg\:overflow-hidden{
+    overflow: hidden;
   }
 
   .lg\:p-12{
@@ -6722,11 +6835,45 @@ shop-pay-button {
   .xl\:h-96{
     height: 24rem;
   }
+
+  .xl\:h-3\/4{
+    height: 75%;
+  }
+
+  .xl\:h-screen{
+    height: 100vh;
+    height: var(--screen-height, 100vh);
+  }
+
+  .xl\:h-\[90vh\]{
+    height: 90vh;
+  }
+
+  .xl\:overflow-hidden{
+    overflow: hidden;
+  }
 }
 @media (min-width: 96em){
 
   .\32xl\:h-96{
     height: 24rem;
+  }
+
+  .\32xl\:h-3\/4{
+    height: 75%;
+  }
+
+  .\32xl\:h-screen{
+    height: 100vh;
+    height: var(--screen-height, 100vh);
+  }
+
+  .\32xl\:h-\[90vh\]{
+    height: 90vh;
+  }
+
+  .\32xl\:overflow-hidden{
+    overflow: hidden;
   }
 }
 @media (min-width: 24em){
