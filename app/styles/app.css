@@ -2489,6 +2489,12 @@ input:checked + .toggle-bg{
 .aspect-square{
   aspect-ratio: 1 / 1;
 }
+.aspect-\[4\/3\]{
+  aspect-ratio: 4/3;
+}
+.aspect-auto{
+  aspect-ratio: auto;
+}
 .h-0{
   height: 0px;
 }
