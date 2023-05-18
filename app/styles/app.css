@@ -2486,14 +2486,11 @@ input:checked + .toggle-bg{
 .aspect-\[4\/5\]{
   aspect-ratio: 4/5;
 }
-.aspect-square{
-  aspect-ratio: 1 / 1;
-}
-.aspect-\[4\/3\]{
-  aspect-ratio: 4/3;
-}
 .aspect-auto{
   aspect-ratio: auto;
+}
+.aspect-square{
+  aspect-ratio: 1 / 1;
 }
 .h-0{
   height: 0px;
@@ -2593,10 +2590,6 @@ input:checked + .toggle-bg{
 .h-screen-no-nav{
   height: calc(100vh - 3rem);
   height: calc(var(--screen-height, 100vh) - var(--height-nav));
-}
-.h-max{
-  height: -moz-max-content;
-  height: max-content;
 }
 .max-h-0{
   max-height: 0px;
@@ -6648,6 +6641,10 @@ shop-pay-button {
     height: 9rem;
   }
 
+  .lg\:h-96{
+    height: 24rem;
+  }
+
   .lg\:grid-cols-3{
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
@@ -6724,10 +6721,6 @@ shop-pay-button {
 
   .xl\:aspect-\[2\/1\]{
     aspect-ratio: 2/1;
-  }
-
-  .xl\:h-80{
-    height: 20rem;
   }
 
   .xl\:h-96{
