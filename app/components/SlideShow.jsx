@@ -5,14 +5,13 @@ import {Carousel} from 'flowbite-react';
 
 export function SlideShow({collections}) {
     return(
-      <div className="h-52 sm:h-64 xl:h-80 2xl:h-96 ">
+      <div className="h-96 sm:h-64 xl:h-96 2xl:h-96 ">
         <Carousel slideInterval={5000}>
           {collections.map((collection) => ( // map through the collections array
             <Link key={collection.id} to={`/collections/${collection.handle}`} className="overscroll-x-hidden overflow-hidden">
                   <Image
+                    height="fit"
                     width="100%"
-                    height="100%"
-                    aspectRatio="4/5"
                     alt={`Image of ${collection.title}`}
                     data={collection.image}
                     loaderOptions={{

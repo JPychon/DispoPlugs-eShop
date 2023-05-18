@@ -20,7 +20,7 @@ export function FeaturedProducts({
   onClose,
   query,
   reverse,
-  sortKey = 'BEST_SELLING',
+  sortKey = 'UPDATED_AT',
 }) {
   const {load, data} = useFetcher();
   const queryString = useMemo(

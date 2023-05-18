@@ -2588,6 +2588,10 @@ input:checked + .toggle-bg{
   height: calc(100vh - 3rem);
   height: calc(var(--screen-height, 100vh) - var(--height-nav));
 }
+.h-max{
+  height: -moz-max-content;
+  height: max-content;
+}
 .max-h-0{
   max-height: 0px;
 }
@@ -6718,6 +6722,10 @@ shop-pay-button {
 
   .xl\:h-80{
     height: 20rem;
+  }
+
+  .xl\:h-96{
+    height: 24rem;
   }
 }
 @media (min-width: 96em){
