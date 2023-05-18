@@ -2486,9 +2486,6 @@ input:checked + .toggle-bg{
 .aspect-\[4\/5\]{
   aspect-ratio: 4/5;
 }
-.aspect-auto{
-  aspect-ratio: auto;
-}
 .aspect-square{
   aspect-ratio: 1 / 1;
 }
@@ -2590,6 +2587,9 @@ input:checked + .toggle-bg{
 .h-screen-no-nav{
   height: calc(100vh - 3rem);
   height: calc(var(--screen-height, 100vh) - var(--height-nav));
+}
+.h-64{
+  height: 16rem;
 }
 .max-h-0{
   max-height: 0px;
@@ -6639,10 +6639,6 @@ shop-pay-button {
 
   .lg\:h-36{
     height: 9rem;
-  }
-
-  .lg\:h-96{
-    height: 24rem;
   }
 
   .lg\:grid-cols-3{
