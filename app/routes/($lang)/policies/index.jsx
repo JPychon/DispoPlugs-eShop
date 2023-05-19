@@ -37,8 +37,8 @@ export default function Policies() {
 
   return (
     <>
-      <PageHeader heading="Policies" />
-      <Section padding="x" className="mb-24">
+      <PageHeader heading="DisposablesPlug Policies" />
+      <Section padding="x" className="flex content-center justify-center mb-24 ">
         {policies.map((policy) => {
           return (
             policy && (

@@ -37,8 +37,11 @@ export function FooterB() {
                             <li className="mb-4">
                                 <a href="http://disposablesplug.com/pages/about-us" className="hover:underline">About Us</a>
                             </li>
-                            <li className='mb-2'>
+                            <li className='mb-4'>
                                 <a href="http://disposablesplug.com/pages/pact-act" className="hover:underline">PACT Act</a>
+                            </li>
+                            <li>
+                                <a href="http://disposablesplug.com/policies" className="hover:underline">Policies</a>
                             </li>
                         </ul>
                     </div>
