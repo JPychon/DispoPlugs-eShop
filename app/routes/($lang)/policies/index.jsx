@@ -37,12 +37,12 @@ export default function Policies() {
 
   return (
     <>
-      <PageHeader heading="DisposablesPlug Policies" />
-      <Section padding="x" className="flex content-center justify-center mb-24 ">
+      <PageHeader heading="Policies & Information" className="border-b border-primary/05" />
+      <Section padding="x" className="flex content-center justify-center mb-24 mt-12">
         {policies.map((policy) => {
           return (
             policy && (
-              <Heading className="font-normal text-heading" key={policy.id}>
+              <Heading className="font-bold text-lg text-base text-center border-2 rounded-md py-6 px-24 bg-clearWhite border-black hover:bg-lightGray" key={policy.id}>
                 <Link to={`/policies/${policy.handle}`}>{policy.title}</Link>
               </Heading>
             )
