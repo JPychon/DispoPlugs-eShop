@@ -135,7 +135,7 @@ export default function Product() {
                     content={descriptionHtml}
                   />
                 )}
-                {shippingPolicy?.body && (
+                {/*shippingPolicy?.body && (
                   <ProductDetail
                     title="Shipping"
                     content={getExcerpt(shippingPolicy.body)}
@@ -148,7 +148,7 @@ export default function Product() {
                     content={getExcerpt(refundPolicy.body)}
                     learnMore={`/policies/${refundPolicy.handle}`}
                   />
-                )}
+                )*/}
               </div>
             </Section>
         </div>
