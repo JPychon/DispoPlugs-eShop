@@ -109,7 +109,7 @@ export default function Homepage() {
             {({collections}) => {
               if (!collections?.nodes) return <></>;
               return (
-                <SlideShow className="overscroll-x-hidden overflow-hidden"
+                <SlideShow className="overflow-x-hidden hiddenScroll"
                   collections={collections.nodes}
                 />
               );

@@ -21,7 +21,7 @@ export function FooterB() {
                                 Address:
                             </li>
                             <li className='mb-2'>
-                              PO Box 807, San Dimas, CA, 91773, United States
+                            590 E Baseline Rd, Claremont, CA, 91711, USA
                             </li>
                             <li className='mb-2 font-semibold text-clearWhite'>
                                 Phone:

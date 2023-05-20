@@ -3575,6 +3575,9 @@ input:checked + .toggle-bg{
 .bg-opacity-75{
   --tw-bg-opacity: 0.75;
 }
+.bg-\[url\(\'https\:\/\/cdn\.shopify\.com\/s\/files\/1\/0745\/8501\/4570\/files\/image1\.jpg\?v\=1684587577\'\)\]{
+  background-image: url('https://cdn.shopify.com/s/files/1/0745/8501/4570/files/image1.jpg?v=1684587577');
+}
 .bg-gradient-to-br{
   background-image: linear-gradient(to bottom right, var(--tw-gradient-stops));
 }
@@ -6667,10 +6670,6 @@ shop-pay-button {
     gap: 1.5rem;
   }
 
-  .lg\:overflow-hidden{
-    overflow: hidden;
-  }
-
   .lg\:p-12{
     padding: 3rem;
   }
@@ -6724,19 +6723,11 @@ shop-pay-button {
   .xl\:h-\[90vh\]{
     height: 90vh;
   }
-
-  .xl\:overflow-hidden{
-    overflow: hidden;
-  }
 }
 @media (min-width: 96em){
 
   .\32xl\:h-\[90vh\]{
     height: 90vh;
-  }
-
-  .\32xl\:overflow-hidden{
-    overflow: hidden;
   }
 }
 @media (min-width: 24em){
