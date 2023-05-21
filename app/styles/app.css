@@ -3571,6 +3571,10 @@ input:checked + .toggle-bg{
   border-bottom-right-radius: 0.25rem;
   border-bottom-left-radius: 0.25rem;
 }
+.rounded-b-xl{
+  border-bottom-right-radius: 0.75rem;
+  border-bottom-left-radius: 0.75rem;
+}
 .rounded-l-full{
   border-top-left-radius: 9999px;
   border-bottom-left-radius: 9999px;
@@ -3602,18 +3606,6 @@ input:checked + .toggle-bg{
 .rounded-t-lg{
   border-top-left-radius: 0.5rem;
   border-top-right-radius: 0.5rem;
-}
-.rounded-b-xl{
-  border-bottom-right-radius: 0.75rem;
-  border-bottom-left-radius: 0.75rem;
-}
-.rounded-l-xl{
-  border-top-left-radius: 0.75rem;
-  border-bottom-left-radius: 0.75rem;
-}
-.rounded-r-xl{
-  border-top-right-radius: 0.75rem;
-  border-bottom-right-radius: 0.75rem;
 }
 .border{
   border-width: 1px;
@@ -4823,6 +4815,9 @@ input:checked + .toggle-bg{
 .fill-yellow-400{
   fill: #E3A008;
 }
+.stroke-1{
+  stroke-width: 1;
+}
 .object-contain{
   -o-object-fit: contain;
      object-fit: contain;
@@ -5879,6 +5874,10 @@ input:checked + .toggle-bg{
 .ring-yellow-300{
   --tw-ring-opacity: 1;
   --tw-ring-color: rgba(250, 202, 21, var(--tw-ring-opacity));
+}
+.drop-shadow-lg{
+  --tw-drop-shadow: drop-shadow(0 10px 8px rgba(0, 0, 0, 0.04)) drop-shadow(0 4px 3px rgba(0, 0, 0, 0.1));
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 .filter{
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
