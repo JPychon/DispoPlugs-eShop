@@ -3603,6 +3603,18 @@ input:checked + .toggle-bg{
   border-top-left-radius: 0.5rem;
   border-top-right-radius: 0.5rem;
 }
+.rounded-b-xl{
+  border-bottom-right-radius: 0.75rem;
+  border-bottom-left-radius: 0.75rem;
+}
+.rounded-l-xl{
+  border-top-left-radius: 0.75rem;
+  border-bottom-left-radius: 0.75rem;
+}
+.rounded-r-xl{
+  border-top-right-radius: 0.75rem;
+  border-bottom-right-radius: 0.75rem;
+}
 .border{
   border-width: 1px;
 }
@@ -3616,6 +3628,10 @@ input:checked + .toggle-bg{
   border-left-width: 0px;
   border-right-width: 0px;
 }
+.border-x-4{
+  border-left-width: 4px;
+  border-right-width: 4px;
+}
 .border-y{
   border-top-width: 1px;
   border-bottom-width: 1px;
@@ -3623,10 +3639,6 @@ input:checked + .toggle-bg{
 .border-y-2{
   border-top-width: 2px;
   border-bottom-width: 2px;
-}
-.border-x-4{
-  border-left-width: 4px;
-  border-right-width: 4px;
 }
 .\!border-b-0{
   border-bottom-width: 0px !important;
@@ -3639,6 +3651,9 @@ input:checked + .toggle-bg{
 }
 .border-b-2{
   border-bottom-width: 2px;
+}
+.border-b-4{
+  border-bottom-width: 4px;
 }
 .border-b-\[1\.5px\]{
   border-bottom-width: 1.5px;
@@ -3669,9 +3684,6 @@ input:checked + .toggle-bg{
 }
 .border-t-4{
   border-top-width: 4px;
-}
-.border-b-4{
-  border-bottom-width: 4px;
 }
 .border-none{
   border-style: none;

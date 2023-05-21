@@ -8,12 +8,12 @@ export function ProductSlideShow({ collections }) {
   return (
     <Carousel
       autoplay
-      className="rounded-xl overflow-hidden lg:h-[90vh] xl:h-[90vh] 2xl:h-[90vh] shadow-lg border-x-4 border-b-4 border-zinc-950"
+      className="rounded-b-xl overflow-hidden lg:h-[90vh] xl:h-[90vh] 2xl:h-[90vh] shadow-lg border-x-4 border-b-4 border-t-2 border-zinc-950"
       prevArrow={({ handlePrev }) => (
         <IconButton
-          variant="filled"
+          variant="outlined"
           color="deep-orange"
-          size="lg"
+          size="md"
           onClick={handlePrev}
           className="!absolute top-2/4 -translate-y-2/4 left-4"
         >
@@ -22,9 +22,9 @@ export function ProductSlideShow({ collections }) {
       )}
       nextArrow={({ handleNext }) => (
         <IconButton
-          variant="filled"
+          variant="outlined"
           color="deep-orange"
-          size="lg"
+          size="md"
           onClick={handleNext}
           className="!absolute top-2/4 -translate-y-2/4 !right-4"
         >
