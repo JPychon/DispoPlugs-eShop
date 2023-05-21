@@ -1,5 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 
+const withMT = require("@material-tailwind/react/utils/withMT");
+
 function withOpacityValue(variable) {
   return ({opacityValue}) => {
     if (opacityValue === undefined) {
@@ -9,7 +11,7 @@ function withOpacityValue(variable) {
   };
 }
 
-module.exports = {
+module.exports = withMT({
   content: ['./app/**/*.{js,ts,jsx,tsx}', 'node_modules/flowbite-react/**/*.{js,jsx,ts,tsx}'],
   theme: {
     extend: {
@@ -78,4 +80,4 @@ module.exports = {
     },
   },
   plugins: [require('@tailwindcss/forms'), require('@tailwindcss/typography'), require('flowbite/plugin')],
-};
+});

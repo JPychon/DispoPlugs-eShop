@@ -1,7 +1,7 @@
 import {defer} from '@shopify/remix-oxygen';
 import {Suspense} from 'react';
 import {Await, useLoaderData} from '@remix-run/react';
-import {ProductSwimlane, SlideShow} from '~/components';
+import {ProductSwimlane, SlideShow, ProductSlideShow} from '~/components';
 import {MEDIA_FRAGMENT, PRODUCT_CARD_FRAGMENT} from '~/data/fragments';
 import {getHeroPlaceholder} from '~/lib/placeholders';
 import {seoPayload} from '~/lib/seo.server';
@@ -109,7 +109,7 @@ export default function Homepage() {
             {({collections}) => {
               if (!collections?.nodes) return <></>;
               return (
-                <SlideShow className="overflow-x-hidden hiddenScroll"
+                <ProductSlideShow
                   collections={collections.nodes}
                 />
               );

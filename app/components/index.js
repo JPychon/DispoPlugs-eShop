@@ -37,6 +37,7 @@ export {HeaderBanner} from './HeaderBanner';
 export {ProductDisplayCard} from './ProductDisplayCard';
 export {Header} from './Header';
 export {SlideShow} from './SlideShow';
+export {ProductSlideShow} from './ProductSlideShow';
 export {AgeVerification} from './AgeVerification';
 export {AuthorizeNetSeal} from './AuthorizeNetSeal';
 export * from './Icon';

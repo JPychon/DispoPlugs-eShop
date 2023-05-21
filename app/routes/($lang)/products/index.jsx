@@ -70,7 +70,7 @@ export default function AllProducts() {
 
   return (
     <>
-      <PageHeader heading="All Products" variant="allCollections" />
+      <PageHeader heading="Disposables" variant="allCollections" />
       <Section>
         <Pagination connection={products}>
           {({
