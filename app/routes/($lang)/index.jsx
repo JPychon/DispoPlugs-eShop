@@ -98,11 +98,6 @@ export default function Homepage() {
 
   return (
     <>
-
-      {/*primaryHero && (
-        <Hero {...primaryHero} height="full" top loading="eager" />
-      )*/}
-
       {featuredCollections && (
         <Suspense>
           <Await resolve={featuredCollections}>
@@ -134,6 +129,8 @@ export default function Homepage() {
           </Await>
         </Suspense>
       )}
+
+      {/*primaryHero && (<Hero {...primaryHero} height="full" top loading="eager" />)*/}
 
       {/*secondaryHero && (
         <Suspense fallback={<Hero {...skeletons[1]} />}>
@@ -172,6 +169,7 @@ export default function Homepage() {
           </Await>
         </Suspense>
       )*/}
+
     </>
   );
 }

@@ -8,10 +8,10 @@ export function ProductSlideShow({ collections }) {
   return (
     <Carousel
       autoplay
-      className="rounded-b-xl overflow-hidden lg:h-[90vh] xl:h-[90vh] 2xl:h-[90vh] drop-shadow-lg border-x-4 border-b-4 border-t-2 border-{#111827}"
+      className="rounded-b-xl overflow-hidden lg:h-[90vh] xl:h-[90vh] 2xl:h-[90vh] border-x-4 border-b-4 border-t-2 border-{#111827}"
       prevArrow={({ handlePrev }) => (
         <IconButton
-          variant="gradient"
+          variant="outlined"
           color="deep-orange"
           size="sm"
           ripple
@@ -23,10 +23,9 @@ export function ProductSlideShow({ collections }) {
       )}
       nextArrow={({ handleNext }) => (
         <IconButton
-          variant="gradient"
+          variant="outlined"
           color="deep-orange"
           size="sm"
-          ripple
           onClick={handleNext}
           className="!absolute top-2/4 -translate-y-2/4 !right-4"
         >
@@ -58,16 +57,14 @@ export function ProductSlideShow({ collections }) {
 
 function Slide({ collection }) {
   return(
-    <div className='w-[100vw] md:w-full lg:w-full xl:w-full 2xl:w-full h-full'>
+    <div className='w-100 md:w-full lg:w-full xl:w-full 2xl:w-full h-full'>
       <Link to={`/collections/${collection.handle}`} key={collection.id}>
                 <Image
-                  className='w-full h-full object-cover aspect-square w-max-full'
+                  className='w-full h-full object-cover aspect-square'
                   data={collection.image}
                   alt={`Image of ${collection.title}`}
-                  loaderOptions={{
-                  scale: 2,
-                  crop: 'bottom',
-                }}
+                  loading='lazy'
+      
                 />
       </Link>
     </div>

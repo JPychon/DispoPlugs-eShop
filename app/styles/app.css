@@ -2891,9 +2891,6 @@ input:checked + .toggle-bg{
 .w-9{
   width: 2.25rem;
 }
-.w-\[100vw\]{
-  width: 100vw;
-}
 .w-\[110px\]{
   width: 110px;
 }
@@ -4815,9 +4812,6 @@ input:checked + .toggle-bg{
 .fill-yellow-400{
   fill: #E3A008;
 }
-.stroke-1{
-  stroke-width: 1;
-}
 .object-contain{
   -o-object-fit: contain;
      object-fit: contain;
@@ -4825,6 +4819,10 @@ input:checked + .toggle-bg{
 .object-cover{
   -o-object-fit: cover;
      object-fit: cover;
+}
+.object-fill{
+  -o-object-fit: fill;
+     object-fit: fill;
 }
 .object-center{
   -o-object-position: center;
@@ -5874,10 +5872,6 @@ input:checked + .toggle-bg{
 .ring-yellow-300{
   --tw-ring-opacity: 1;
   --tw-ring-color: rgba(250, 202, 21, var(--tw-ring-opacity));
-}
-.drop-shadow-lg{
-  --tw-drop-shadow: drop-shadow(0 10px 8px rgba(0, 0, 0, 0.04)) drop-shadow(0 4px 3px rgba(0, 0, 0, 0.1));
-  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 .filter{
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
