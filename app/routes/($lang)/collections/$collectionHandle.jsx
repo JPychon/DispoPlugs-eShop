@@ -120,9 +120,9 @@ export default function Collection() {
     <>
       <PageHeader heading={collection.title}>
         {collection?.description && (
-          <div className="flex items-baseline justify-between w-full">
+          <div className="flex items-baseline justify-center content-center w-full">
             <div>
-              <Text format width="narrow" as="p" className="inline-block">
+              <Text format width="wide" as="p" className="inline-block">
                 {collection.description}
               </Text>
             </div>
