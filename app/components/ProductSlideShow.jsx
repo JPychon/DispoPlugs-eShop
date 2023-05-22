@@ -60,7 +60,7 @@ function Slide({ collection }) {
     <div className='w-100 md:w-full lg:w-full xl:w-full 2xl:w-full h-full'>
       <Link to={`/collections/${collection.handle}`} key={collection.id}>
                 <Image
-                  className='w-full h-full object-cover aspect-square'
+                  className='w-full h-full object-cover aspect-square lg:object-fill'
                   data={collection.image}
                   alt={`Image of ${collection.title}`}
                   loading='lazy'
