@@ -2,6 +2,8 @@ import {Link} from '~/components';
 import {Image} from '@shopify/hydrogen';
 import { Carousel, IconButton } from "@material-tailwind/react";
 import { ArrowLeftIcon, ArrowRightIcon } from "@heroicons/react/24/outline"
+import { Swiper, SwiperSlide } from 'swiper/react';
+
 
 export function ProductSlideShow({ collections }) {
   return (
@@ -11,8 +13,8 @@ export function ProductSlideShow({ collections }) {
         className="rounded-b-md h-[60vh]"
       prevArrow={({ handlePrev }) => (
         <IconButton
-          variant="outlined"
-          color="deep-orange"
+          variant="filled"
+          color="blue-gray"
           size="sm"
           ripple
           onClick={handlePrev}
@@ -23,8 +25,8 @@ export function ProductSlideShow({ collections }) {
       )}
       nextArrow={({ handleNext }) => (
         <IconButton
-          variant="outlined"
-          color="deep-orange"
+          variant="filled"
+          color="blue-gray"
           size="sm"
           onClick={handleNext}
           className="!absolute top-2/4 -translate-y-2/4 !right-4"
@@ -38,7 +40,7 @@ export function ProductSlideShow({ collections }) {
             <span
               key={i}
               className={`block h-1 cursor-pointer rounded-2xl transition-all content-[''] ${
-                activeIndex === i ? "bg-orange w-8" : "bg-orange w-4"
+                activeIndex === i ? "bg-gray w-8" : "bg-black w-4"
               }`}
               onClick={() => setActiveIndex(i)}
             />
@@ -58,10 +60,10 @@ export function ProductSlideShow({ collections }) {
 
 function Slide({ collection }) {
   return(
-    <div className='w-full h-full bg-[#111827] mt-0 border-t-0'>
+    <div className='w-full h-full bg-gradient-to-r from-primary to-transparent shadow-md rounded-b-lg overflow-hidden p-2'>
       <Link to={`/collections/${collection.handle}`} key={collection.id}>
         <Image
-          className='w-full h-full object-contain rounded-md border-4 border-gray-200'
+          className='w-full h-full pb-4 pl-0 pr-0 ml-0 mr-0 object-contain bg-primaryOpacity transition-transform duration-500 transform hover:scale-105'
           data={collection.image}
           alt={`Image of ${collection.title}`}
           loading='lazy'
