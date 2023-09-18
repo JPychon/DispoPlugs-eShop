@@ -99,18 +99,20 @@ export default function Homepage() {
   return (
     <>
       {featuredCollections && (
-        <Suspense>
-          <Await resolve={featuredCollections}>
-            {({collections}) => {
-              if (!collections?.nodes) return <></>;
-              return (
-                <ProductSlideShow
-                  collections={collections.nodes}
-                />
-              );
-            }}
-          </Await>
-        </Suspense>
+        <div className="mt-0">
+          <Suspense>
+            <Await resolve={featuredCollections}>
+              {({collections}) => {
+                if (!collections?.nodes) return <></>;
+                return (
+                  <ProductSlideShow
+                    collections={collections.nodes}
+                  />
+                );
+              }}
+            </Await>
+          </Suspense>
+        </div>
       )}
 
       {featuredProducts && (

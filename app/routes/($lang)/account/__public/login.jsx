@@ -158,7 +158,7 @@ export default function Login() {
           </div>
           <div className="flex items-center justify-between">
             <button
-              className="bg-primary text-slate-50 rounded py-2 px-4 focus:shadow-outline block w-full"
+              className="mt-2 w-full justify-items-center rounded bg-primary px-6 pb-2 pt-2.5 uppercase leading-normal text-clearWhite shadow-[0_4px_9px_-4px_rgba(51,45,45,0.7)]"
               type="submit"
               disabled={!!(nativePasswordError || nativeEmailError)}
             >

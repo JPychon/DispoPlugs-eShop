@@ -3,12 +3,12 @@ import {Image} from '@shopify/hydrogen';
 import { Carousel, IconButton } from "@material-tailwind/react";
 import { ArrowLeftIcon, ArrowRightIcon } from "@heroicons/react/24/outline"
 
-
 export function ProductSlideShow({ collections }) {
   return (
-    <Carousel
-      autoplay
-      className="rounded-b-xl overflow-hidden lg:h-[90vh] xl:h-[90vh] 2xl:h-[90vh] border-x-4 border-b-4 border-t-2 border-{#111827}"
+    <div className="shadow-lg overflow-hidden">
+      <Carousel
+        autoplay
+        className="rounded-b-md h-[60vh]"
       prevArrow={({ handlePrev }) => (
         <IconButton
           variant="outlined"
@@ -52,20 +52,20 @@ export function ProductSlideShow({ collections }) {
       })
       }
   </Carousel>
+  </div>
   )
 } 
 
 function Slide({ collection }) {
   return(
-    <div className='w-100 md:w-full lg:w-full xl:w-full 2xl:w-full h-full'>
+    <div className='w-full h-full bg-[#111827] mt-0 border-t-0'>
       <Link to={`/collections/${collection.handle}`} key={collection.id}>
-                <Image
-                  className='w-full h-full object-cover aspect-square lg:object-fill'
-                  data={collection.image}
-                  alt={`Image of ${collection.title}`}
-                  loading='lazy'
-      
-                />
+        <Image
+          className='w-full h-full object-contain rounded-md border-4 border-gray-200'
+          data={collection.image}
+          alt={`Image of ${collection.title}`}
+          loading='lazy'
+        />
       </Link>
     </div>
   )
